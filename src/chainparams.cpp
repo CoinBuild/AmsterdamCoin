@@ -92,7 +92,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 		
-		vSeeds.push_back(CDNSSeedData("www.amsterdamblockchain.info", "www.amsterdamblockchain.info"));
+		vSeeds.push_back(CDNSSeedData("host.blockexplorer.pro", "host.blockexplorer.pro"));
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
