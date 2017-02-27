@@ -3,5 +3,4 @@ release/*
 Makefile
 *.Debug
 *.Release
-*.cpp
 src/qt/locale/*
