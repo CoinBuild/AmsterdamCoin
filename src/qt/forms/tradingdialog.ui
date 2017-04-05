@@ -704,7 +704,7 @@
             </font>
            </property>
            <property name="text">
-            <string>TX Available:</string>
+            <string>AMS Available:</string>
            </property>
           </widget>
          </item>
@@ -1148,7 +1148,7 @@
             </font>
            </property>
            <property name="text">
-            <string> TX</string>
+            <string> AMS</string>
            </property>
           </widget>
          </item>
@@ -1186,7 +1186,7 @@
        <item row="4" column="4">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>TX</string>
+          <string>AMS</string>
          </property>
         </widget>
        </item>
@@ -1222,7 +1222,7 @@
        <item row="4" column="10">
         <widget class="QLabel" name="label_22">
          <property name="text">
-          <string>TX</string>
+          <string>AMS</string>
          </property>
         </widget>
        </item>
@@ -2320,7 +2320,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Demand: 0.00000000 TX</string>
+          <string>Demand: 0.00000000 AMS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2330,7 +2330,7 @@
        <item row="0" column="9" colspan="3">
         <widget class="QLabel" name="TXSupply">
          <property name="text">
-          <string>Supply: 0.00000000 TX</string>
+          <string>Supply: 0.00000000 AMS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3279,7 +3279,7 @@
             </font>
            </property>
            <property name="text">
-            <string>TX</string>
+            <string>AMS</string>
            </property>
           </widget>
          </item>
@@ -3865,7 +3865,7 @@
             </font>
            </property>
            <property name="text">
-            <string>TX Balance:</string>
+            <string>AMS Balance:</string>
            </property>
           </widget>
          </item>
@@ -4314,7 +4314,7 @@
             </font>
            </property>
            <property name="text">
-            <string>TX</string>
+            <string>AMS</string>
            </property>
           </widget>
          </item>
@@ -4917,7 +4917,7 @@
           </font>
          </property>
          <property name="text">
-          <string>TX Balance:</string>
+          <string>AMS Balance:</string>
          </property>
         </widget>
        </item>
@@ -4988,7 +4988,7 @@
           </font>
          </property>
          <property name="text">
-          <string>TX Available:</string>
+          <string>AMS Available:</string>
          </property>
         </widget>
        </item>
@@ -5046,7 +5046,7 @@
           </font>
          </property>
          <property name="text">
-          <string>TX Pending:</string>
+          <string>AMS Pending:</string>
          </property>
         </widget>
        </item>

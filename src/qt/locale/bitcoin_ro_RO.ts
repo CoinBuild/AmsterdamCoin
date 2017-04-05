@@ -1731,7 +1731,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 TX</source>
+        <source>0.00 AMS</source>
         <translation>123.456 AMS {0.00 ?}</translation>
     </message>
     <message>

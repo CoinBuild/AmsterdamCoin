@@ -1739,7 +1739,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 TX</source>
+        <source>0.00 AMS</source>
         <translation type="unfinished">123.456 AMS {0.00 ?}</translation>
     </message>
     <message>

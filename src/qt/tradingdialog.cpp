@@ -283,7 +283,7 @@ int tradingDialog::SetExchangeInfoTextLabels(){
 
     ui->Bid->setText("<b>Bid:</b> <span style='font-weight:bold; font-size:12px; color:Green;'>" + str.number(obj["Bid"].toDouble(),'i',8) + "</span> BTC");
 
-    ui->volumet->setText("<b>TX Volume:</b> <span style='font-weight:bold; font-size:12px; color:blue;'>" + str.number(obj["Volume"].toDouble(),'i',8) + "</span> TX");
+    ui->volumet->setText("<b>AMS Volume:</b> <span style='font-weight:bold; font-size:12px; color:blue;'>" + str.number(obj["Volume"].toDouble(),'i',8) + "</span> TX");
 
     ui->volumebtc->setText("<b>BTC Volume:</b> <span style='font-weight:bold; font-size:12px; color:blue;'>" + str.number(obj["BaseVolume"].toDouble(),'i',8) + "</span> BTC");
 
@@ -510,11 +510,11 @@ void tradingDialog::ParseAndPopulateOrderBookTables(QString OrderBook){
         BuyItteration++;
     }
 
-    ui->TXSupply->setText("<b>Supply:</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(TXSupply,'i',8) + "</span><b> TX</b>");
+    ui->TXSupply->setText("<b>Supply:</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(TXSupply,'i',8) + "</span><b> AMS</b>");
     ui->BtcSupply->setText("<span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(BtcSupply,'i',8) + "</span><b> BTC</b>");
     ui->AsksCount->setText("<b>Ask's :</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(ui->AsksTable->rowCount()) + "</span>");
 
-    ui->TXDemand->setText("<b>Demand:</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(TXDemand,'i',8) + "</span><b> TX</b>");
+    ui->TXDemand->setText("<b>Demand:</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(TXDemand,'i',8) + "</span><b> AMS</b>");
     ui->BtcDemand->setText("<span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(BtcDemand,'i',8) + "</span><b> BTC</b>");
     ui->BidsCount->setText("<b>Bid's :</b> <span style='font-weight:bold; font-size:12px; color:blue'>" + str.number(ui->BidsTable->rowCount()) + "</span>");
     obj.empty();

@@ -1729,7 +1729,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 TX</source>
+        <source>0.00 AMS</source>
         <translation>123.456 AMS {0.00 ?}</translation>
     </message>
     <message>

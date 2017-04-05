@@ -789,7 +789,7 @@ void CDarksendPool::ChargeRandomFees(){
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
                 allow endless transaction that would bloat AmsterdamCoin and make it unusable. To
                 stop these kinds of attacks 1 in 50 successful transactions are charged. This
-                adds up to a cost of 0.002TX per transaction on average.
+                adds up to a cost of 0.002AMS per transaction on average.
             */
             if(r <= 10)
             {
@@ -1930,10 +1930,10 @@ bool CDarksendPool::IsCompatibleWithSession(int64_t nDenom, CTransaction txColla
 void CDarksendPool::GetDenominationsToString(int nDenom, std::string& strDenom){
     // Function returns as follows:
     //
-    // bit 0 - 100TX+1 ( bit on if present )
-    // bit 1 - 10TX+1
-    // bit 2 - 1TX+1
-    // bit 3 - .1TX+1
+    // bit 0 - 100AMS+1 ( bit on if present )
+    // bit 1 - 10AMS+1
+    // bit 2 - 1AMS+1
+    // bit 3 - .1TAMS+1
     // bit 3 - non-denom
 
 
@@ -2006,10 +2006,10 @@ int CDarksendPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSingl
 
     // Function returns as follows:
     //
-    // bit 0 - 100TX+1 ( bit on if present )
-    // bit 1 - 10TX+1
-    // bit 2 - 1TX+1
-    // bit 3 - .1TX+1
+    // bit 0 - 100AMS+1 ( bit on if present )
+    // bit 1 - 10AMS+1
+    // bit 2 - 1AMS+1
+    // bit 3 - .1AMS+1
 
     return denom;
 }

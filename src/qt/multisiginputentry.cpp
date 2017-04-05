@@ -129,10 +129,10 @@ void MultisigInputEntry::on_transactionId_textChanged(const QString &transaction
         {
             CAmsterdamCoinAddress address(addr);
             QString addressStr(address.ToString().c_str());
-            ui->transactionOutput->addItem(idStr + QString(" - ") + addressStr + QString(" - ") + amountStr + QString(" TX"));
+            ui->transactionOutput->addItem(idStr + QString(" - ") + addressStr + QString(" - ") + amountStr + QString(" AMS"));
         }
         else
-            ui->transactionOutput->addItem(idStr + QString(" - ") + amountStr + QString(" TX"));
+            ui->transactionOutput->addItem(idStr + QString(" - ") + amountStr + QString(" AMS"));
     }
 }
 
