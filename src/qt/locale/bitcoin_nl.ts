@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Transfer</source>
-        <translation>Over Transfer</translation>
+        <source>About AmsterdamCoin</source>
+        <translation>Over AmsterdamCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Transfer&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Transfer&lt;/b&gt; versie</translation>
+        <source>&lt;b&gt;AmsterdamCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;AmsterdamCoin&lt;/b&gt; versie</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Transfer developers</source>
+Copyright © 2017 The AmsterdamCoin developers</source>
         <translation>Copyright © 2009-2014 De Bitcoin ontwikkelaars
 Copyright © 2012-2014 De NovaCoin ontwikkelaars
-Copyright © 2014 De Transfer ontwikkelaars</translation>
+Copyright © 2014 De AmsterdamCoin ontwikkelaars</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,8 +60,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Transfer addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dit zijn al jou Transfer adressen om betalingen mee te ontvangen. Je kunt iedere verzender een apart adres geven zodat je kunt volgen wie jou betaald.</translation>
+        <source>These are your AmsterdamCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dit zijn al jou AmsterdamCoin adressen om betalingen mee te ontvangen. Je kunt iedere verzender een apart adres geven zodat je kunt volgen wie jou betaald.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Transfer address</source>
-        <translation>Teken een bericht om te bewijzen dat je een Transfer adres bezit.</translation>
+        <source>Sign a message to prove you own a AmsterdamCoin address</source>
+        <translation>Teken een bericht om te bewijzen dat je een AmsterdamCoin adres bezit.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Transfer address</source>
-        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek Transfer adres</translation>
+        <source>Verify a message to ensure it was signed with a specified AmsterdamCoin address</source>
+        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek AmsterdamCoin adres</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,8 +258,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Transfer will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Transfer zal nu sluiten om het versleutel proces te voltooien. Onthou dat het versleutelen van je portemonnee je niet volledig beschermt tegen diefstal van munten door malware op je computer.</translation>
+        <source>AmsterdamCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>AmsterdamCoin zal nu sluiten om het versleutel proces te voltooien. Onthou dat het versleutelen van je portemonnee je niet volledig beschermt tegen diefstal van munten door malware op je computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Transfer</source>
-        <translation>Toon informatie over Transfer</translation>
+        <source>Show information about AmsterdamCoin</source>
+        <translation>Toon informatie over AmsterdamCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Transfer address</source>
-        <translation>Verstuur munten naar een Transfer adres</translation>
+        <source>Send coins to a AmsterdamCoin address</source>
+        <translation>Verstuur munten naar een AmsterdamCoin adres</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Transfer</source>
-        <translation>Verander configuratie opties voor Transfer</translation>
+        <source>Modify configuration options for AmsterdamCoin</source>
+        <translation>Verander configuratie opties voor AmsterdamCoin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Transfer</source>
-        <translation>&amp;Over Transfer</translation>
+        <source>&amp;About AmsterdamCoin</source>
+        <translation>&amp;Over AmsterdamCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Transfer client</source>
-        <translation>Transfer client</translation>
+        <source>AmsterdamCoin client</source>
+        <translation>AmsterdamCoin client</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Transfer network</source>
-        <translation><numerusform>%n actieve verbinding naar Transfer netwerk</numerusform><numerusform>%n actieve verbindingen naar Transfer netwerk</numerusform></translation>
+        <source>%n active connection(s) to AmsterdamCoin network</source>
+        <translation><numerusform>%n actieve verbinding naar AmsterdamCoin netwerk</numerusform><numerusform>%n actieve verbindingen naar AmsterdamCoin netwerk</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -600,8 +600,8 @@ Adres: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Transfer address or malformed URI parameters.</source>
-        <translation>URI kan niet ontleedt worden! Mogelijke oorzaken zijn een ongeldig Transfer adres of incorrecte URI parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid AmsterdamCoin address or malformed URI parameters.</source>
+        <translation>URI kan niet ontleedt worden! Mogelijke oorzaken zijn een ongeldig AmsterdamCoin adres of incorrecte URI parameters.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Transfer can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout . Transfer kan niet langer veilig doorgaan en sluit af.</translation>
+        <source>A fatal error occurred. AmsterdamCoin can no longer continue safely and will quit.</source>
+        <translation>Een fatale fout . AmsterdamCoin kan niet langer veilig doorgaan en sluit af.</translation>
     </message>
 </context>
 <context>
@@ -1057,8 +1057,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Transfer address.</source>
-        <translation>Het ingevoerde adres &quot;%1&quot; is geen geldig Transfer adres.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid AmsterdamCoin address.</source>
+        <translation>Het ingevoerde adres &quot;%1&quot; is geen geldig AmsterdamCoin adres.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1076,8 +1076,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Transfer-Qt</source>
-        <translation>Transfer-Qt</translation>
+        <source>AmsterdamCoin-Qt</source>
+        <translation>AmsterdamCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1149,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Transfer after logging in to the system.</source>
-        <translation>Automatisch starten van Transfer na inloggen van het systeem.</translation>
+        <source>Automatically start AmsterdamCoin after logging in to the system.</source>
+        <translation>Automatisch starten van AmsterdamCoin na inloggen van het systeem.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Transfer on system login</source>
-        <translation>&amp;Start Transfer bij systeem aanmelding</translation>
+        <source>&amp;Start AmsterdamCoin on system login</source>
+        <translation>&amp;Start AmsterdamCoin bij systeem aanmelding</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1164,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Transfer client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>De Transfer client poort automatisch openen op de router. Dit werkt alleen wanneer uw router UPnP ondersteunt en deze is ingeschakeld.</translation>
+        <source>Automatically open the AmsterdamCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>De AmsterdamCoin client poort automatisch openen op de router. Dit werkt alleen wanneer uw router UPnP ondersteunt en deze is ingeschakeld.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1174,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Transfer network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Verbinding maken met het Transfer netwerk via een SOCKS proxy (bijvoorbeeld als U gebruik maakt van Tor)</translation>
+        <source>Connect to the AmsterdamCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Verbinding maken met het AmsterdamCoin netwerk via een SOCKS proxy (bijvoorbeeld als U gebruik maakt van Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1249,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Transfer.</source>
-        <translation>De user interface-taal kan hier ingesteld worden. Deze instelling word toegepast na Transfer opnieuw op te starten.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting AmsterdamCoin.</source>
+        <translation>De user interface-taal kan hier ingesteld worden. Deze instelling word toegepast na AmsterdamCoin opnieuw op te starten.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1316,8 +1316,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Transfer.</source>
-        <translation>Deze instelling word toegepast na een restart van Transfer.</translation>
+        <source>This setting will take effect after restarting AmsterdamCoin.</source>
+        <translation>Deze instelling word toegepast na een restart van AmsterdamCoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1335,8 +1335,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Transfer network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn, Je portemonnee synchroniseerd automatisch met het Transfer netwerk nadat er verbindig is gemaakt, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AmsterdamCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn, Je portemonnee synchroniseerd automatisch met het AmsterdamCoin netwerk nadat er verbindig is gemaakt, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1577,8 +1577,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Transfer-Qt help message to get a list with possible Transfer command-line options.</source>
-        <translation>Laat het Transfer-QT help bericht zien om een lijst te krijgen met mogelijke Transfer command-regel opties.</translation>
+        <source>Show the AmsterdamCoin-Qt help message to get a list with possible AmsterdamCoin command-line options.</source>
+        <translation>Laat het AmsterdamCoin-QT help bericht zien om een lijst te krijgen met mogelijke AmsterdamCoin command-regel opties.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1597,13 +1597,13 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Transfer - Debug window</source>
-        <translation>Transfer - Debugscherm</translation>
+        <source>AmsterdamCoin - Debug window</source>
+        <translation>AmsterdamCoin - Debugscherm</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Transfer Core</source>
-        <translation>Transfer Kern</translation>
+        <source>AmsterdamCoin Core</source>
+        <translation>AmsterdamCoin Kern</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1612,8 +1612,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Transfer debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het Transfer debug log bestand van de huidige data map. Dit kan een paar seconden duren voor grote log bestanden.</translation>
+        <source>Open the AmsterdamCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het AmsterdamCoin debug log bestand van de huidige data map. Dit kan een paar seconden duren voor grote log bestanden.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1622,8 +1622,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Transfer RPC console.</source>
-        <translation>Welkom bij de Transfer RPC console.</translation>
+        <source>Welcome to the AmsterdamCoin RPC console.</source>
+        <translation>Welkom bij de AmsterdamCoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1816,8 +1816,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Voeg een Transfer adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1916,8 +1916,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Transfer address</source>
-        <translation>WAARSCHUWING: Ongeldig Transfer adres</translation>
+        <source>WARNING: Invalid AmsterdamCoin address</source>
+        <translation>WAARSCHUWING: Ongeldig AmsterdamCoin adres</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1990,8 +1990,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Voeg een Transfer adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2051,8 +2051,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Transfer address</source>
-        <translation>Teken een bericht om te bewijzen dat je een Transfer adres bezit.</translation>
+        <source>Sign the message to prove you own this AmsterdamCoin address</source>
+        <translation>Teken een bericht om te bewijzen dat je een AmsterdamCoin adres bezit.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,8 +2083,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Transfer address</source>
-        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek Transfer adres</translation>
+        <source>Verify the message to ensure it was signed with the specified AmsterdamCoin address</source>
+        <translation>Verifieer een bericht om zeker te zijn dat deze is ondertekend met een specifiek AmsterdamCoin adres</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2094,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Voeg een Transfer adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2104,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Transfer signature</source>
-        <translation>Voer Transfer handtekening in</translation>
+        <source>Enter AmsterdamCoin signature</source>
+        <translation>Voer AmsterdamCoin handtekening in</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2683,8 +2683,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+172"/>
-        <source>Transfer version</source>
-        <translation>Transfer versie</translation>
+        <source>AmsterdamCoin version</source>
+        <translation>AmsterdamCoin versie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2742,7 +2742,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2848,8 +2848,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo
     </message>
     <message>
         <location line="-102"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Transfer will not work properly.</source>
-        <translation>Waarschuwing: Controleer of de datum en tijd van de computer juist zijn! Als uw klok verkeerd is Transfer zal niet goed werken.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong AmsterdamCoin will not work properly.</source>
+        <translation>Waarschuwing: Controleer of de datum en tijd van de computer juist zijn! Als uw klok verkeerd is AmsterdamCoin zal niet goed werken.</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -3150,7 +3150,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. Transfer is shutting down.</source>
+        <source>Initialization sanity check failed. AmsterdamCoin is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3215,13 +3215,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Transfer</source>
-        <translation>Fout bij laden van wallet.dat: Portemonnee vereist een nieuwere versie van Transfer</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of AmsterdamCoin</source>
+        <translation>Fout bij laden van wallet.dat: Portemonnee vereist een nieuwere versie van AmsterdamCoin</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Transfer to complete</source>
-        <translation>Portemonnee moet herschreven worden: herstart Transfer om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart AmsterdamCoin to complete</source>
+        <translation>Portemonnee moet herschreven worden: herstart AmsterdamCoin om te voltooien</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3285,8 +3285,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo
     </message>
     <message>
         <location line="+124"/>
-        <source>Unable to bind to %s on this computer. Transfer is probably already running.</source>
-        <translation>Niet mogelijk om %s op deze computer. Transfer is waarschijnlijk al geopened.</translation>
+        <source>Unable to bind to %s on this computer. AmsterdamCoin is probably already running.</source>
+        <translation>Niet mogelijk om %s op deze computer. AmsterdamCoin is waarschijnlijk al geopened.</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -3325,7 +3325,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Transfer is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. AmsterdamCoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

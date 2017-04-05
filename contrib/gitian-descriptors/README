@@ -161,7 +161,7 @@ login again:
 $ ssh debian@localhost -p 22222
 
 $ git clone https://github.com/devrandom/gitian-builder.git
-$ git clone https://github.com/SCDeveloper/Transfer.git transfer
+$ git clone https://github.com/CoinProjects/AmsterdamCoin.git transfer
 
 $ cd gitian-builder
 

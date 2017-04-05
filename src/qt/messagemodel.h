@@ -67,7 +67,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to Transfer Secure Messaging from Qt view code. */
+/** Interface to AmsterdamCoin Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

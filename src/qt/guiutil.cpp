@@ -492,12 +492,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Transfer.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "AmsterdamCoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Transfer.lnk
+    // check for AmsterdamCoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -687,7 +687,7 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Transfer-Qt") + " " + tr("version") + " " +
+    header = tr("AmsterdamCoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
         "  transfer-qt [" + tr("command-line options") + "]                     " + "\n";
@@ -699,7 +699,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Transfer-Qt"));
+    setWindowTitle(tr("AmsterdamCoin-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

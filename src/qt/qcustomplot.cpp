@@ -14187,14 +14187,14 @@ void QCPColorScale::setType(QCPAxis::AxisType type)
   {
     mType = type;
     QCPRange rangeTransfer(0, 6);
-    double logBaseTransfer = 10;
+    double logBaseAmsterdamCoin = 10;
     QString labelTransfer;
     // revert some settings on old axis:
     if (mColorAxis)
     {
-      rangeTransfer = mColorAxis.data()->range();
-      labelTransfer = mColorAxis.data()->label();
-      logBaseTransfer = mColorAxis.data()->scaleLogBase();
+      rangeAmsterdamCoin = mColorAxis.data()->range();
+      labelAmsterdamCoin = mColorAxis.data()->label();
+      logBaseAmsterdamCoin = mColorAxis.data()->scaleLogBase();
       mColorAxis.data()->setLabel("");
       disconnect(mColorAxis.data(), SIGNAL(rangeChanged(QCPRange)), this, SLOT(setDataRange(QCPRange)));
       disconnect(mColorAxis.data(), SIGNAL(scaleTypeChanged(QCPAxis::ScaleType)), this, SLOT(setDataScaleType(QCPAxis::ScaleType)));

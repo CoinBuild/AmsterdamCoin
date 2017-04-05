@@ -19,7 +19,7 @@ packages:
 - "bsdmainutils"
 reference_datetime: "2015-05-25 00:00:00"
 remotes:
-- "url": "https://github.com/SCDeveloper/Transfer.git"
+- "url": "https://github.com/CoinProjects/AmsterdamCoin.git"
   "dir": "transfer"
 files:
 - "transfer-deps-linux32-gitian.zip"
@@ -60,4 +60,4 @@ script: |
   cd ..
   qmake INCLUDEPATH="$STAGING/include" LIBS="-L$STAGING/lib" BOOST_LIB_SUFFIX="-mt" RELEASE=1 USE_QRCODE=1 USE_NATIVE_I2P=1
   make $MAKEOPTS
-  install Transfer $OUTDIR/bin/$GBUILD_BITS
+  install AmsterdamCoin $OUTDIR/bin/$GBUILD_BITS

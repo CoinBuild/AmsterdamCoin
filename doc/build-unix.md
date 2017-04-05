@@ -77,7 +77,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build Transfer-Qt, make sure that the required packages for Qt development
+If you want to build AmsterdamCoin-Qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used.
 
@@ -128,7 +128,7 @@ Notes
 2) The release is built with GCC and then "strip transferd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
-To Build Transferd
+To Build amsterdamcoind
 --------
 
 With UPNP:
@@ -143,7 +143,7 @@ With UPNP:
     make -f makefile.unix USE_UPNP= && \
     strip transferd
 
-To Build Transfer-QT
+To Build AmsterdamCoin-QT
 --------
 
 With UPNP:

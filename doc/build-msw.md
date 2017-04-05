@@ -7,7 +7,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP
 software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building Transfer QT, the
+See readme-qt.rst for instructions on building AmsterdamCoin QT, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -91,7 +91,7 @@ MSYS transfer:
     mkdir miniupnpc
     cp *.h miniupnpc/
 
-Build Transferd
+Build amsterdamcoind
 -------
 DOS prompt:
 

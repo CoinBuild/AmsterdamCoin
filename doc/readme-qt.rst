@@ -1,4 +1,4 @@
-Transfer-qt: Qt5 GUI for Transfer
+AmsterdamCoin-qt: Qt5 GUI for AmsterdamCoin
 ===============================
 
 Linux

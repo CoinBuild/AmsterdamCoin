@@ -7,13 +7,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Transfer-Qt</string>
+	<string>AmsterdamCoin-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Transfer-Qt</string>
+	<string>AmsterdamCoin-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.transfer.Transfer-Qt</string>
+	<string>co.transfer.AmsterdamCoin-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>

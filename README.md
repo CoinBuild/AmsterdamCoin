@@ -1,7 +1,7 @@
 
-Transfer is a PoS-based cryptocurrency.
+AmsterdamCoin is a PoS-based cryptocurrency.
 
-Transfer uses libsecp256k1,
+AmsterdamCoin uses libsecp256k1,
 			  libgmp,
 			  Boost1.55,
 			  OR Boost1.57,  

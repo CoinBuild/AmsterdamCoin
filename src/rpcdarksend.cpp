@@ -160,8 +160,8 @@ Value masternode(const Array& params, bool fHelp)
                 "  stop-alias   - Stop single masternode by assigned alias configured in masternode.conf\n"
                 "  stop-many    - Stop all masternodes configured in masternode.conf\n"
                 "  winners      - Print list of masternode winners\n"
-                "  vote-many    - Vote on a Transfer initiative\n"
-                "  vote         - Vote on a Transfer initiative\n"
+                "  vote-many    - Vote on a AmsterdamCoin initiative\n"
+                "  vote         - Vote on a AmsterdamCoin initiative\n"
                 );
 
     if (strCommand == "stop")
@@ -782,7 +782,7 @@ Value masternodelist(const Array& params, bool fHelp)
                 "  rank           - Print rank of a masternode based on current block\n"
                 "  status         - Print masternode status: ENABLED / EXPIRED / VIN_SPENT / REMOVE / POS_ERROR (can be additionally filtered, partial match)\n"
                 "  addr            - Print ip address associated with a masternode (can be additionally filtered, partial match)\n"
-                "  votes          - Print all masternode votes for a Transfer initiative (can be additionally filtered, partial match)\n"
+                "  votes          - Print all masternode votes for a AmsterdamCoin initiative (can be additionally filtered, partial match)\n"
                 "  lastpaid       - The last time a node was paid on the network\n"
                 );
     }

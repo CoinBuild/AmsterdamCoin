@@ -782,7 +782,7 @@ WalletModel::UnlockContext::~UnlockContext()
 
 void WalletModel::UnlockContext::CopyFrom(const UnlockContext& rhs)
 {
-    // Transfer context; old object no longer relocks wallet
+    // AmsterdamCoin context; old object no longer relocks wallet
     *this = rhs;
     rhs.relock = false;
 }

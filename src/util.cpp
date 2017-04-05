@@ -1106,7 +1106,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.transfer
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Transfer";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "AmsterdamCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1118,7 +1118,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Transfer";
+    return pathRet / "AmsterdamCoin";
 #else
     // Unix
     return pathRet / ".transfer";

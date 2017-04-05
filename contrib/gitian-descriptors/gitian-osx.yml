@@ -21,7 +21,7 @@ packages:
 - "genisoimage"
 reference_datetime: "2013-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/SCDeveloper/Transfer.git"
+- "url": "https://github.com/CoinProjects/AmsterdamCoin.git"
   "dir": "transfer"
 files:
 - "qt-osx-5.5.0-gitian.tar.xz"
@@ -76,13 +76,13 @@ script: |
   export INSTALLNAMETOOL=${HOST}-install_name_tool
   export STRIP=${HOST}-strip
   chmod +x contrib/macdeploy/macdeployqtplus
-  OTOOL=${HOST}-otool INSTALLNAMETOOL=${HOST}-install_name_tool STRIP=${HOST}-strip contrib/macdeploy/macdeployqtplus Transfer-Qt.app
+  OTOOL=${HOST}-otool INSTALLNAMETOOL=${HOST}-install_name_tool STRIP=${HOST}-strip contrib/macdeploy/macdeployqtplus AmsterdamCoin-Qt.app
   mkdir -p  dist/.background
   install contrib/macdeploy/background.png dist/.background
   install contrib/macdeploy/DS_Store dist/.DS_Store
   cd dist
   ln -sf /Applications Applications
   cd ..
-  genisoimage -no-cache-inodes -l -probe -V "Transfer-Qt" -no-pad -r -apple -o Shadow.tmp.dmg dist
-  dmg dmg Transfer-Qt.tmp.dmg $OUTDIR/Transfer.dmg
+  genisoimage -no-cache-inodes -l -probe -V "AmsterdamCoin-Qt" -no-pad -r -apple -o Shadow.tmp.dmg dist
+  dmg dmg AmsterdamCoin-Qt.tmp.dmg $OUTDIR/AmsterdamCoin.dmg
   #
