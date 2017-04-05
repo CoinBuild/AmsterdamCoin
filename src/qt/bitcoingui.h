@@ -14,6 +14,7 @@ class OverviewPage;
 class AddressBookPage;
 class SendCoinsDialog;
 class SignVerifyMessageDialog;
+class MultisigDialog;
 class Notificator;
 class RPCConsole;
 class MasternodeManager;
@@ -26,6 +27,7 @@ QT_BEGIN_NAMESPACE
 class QLabel;
 class QModelIndex;
 class QProgressBar;
+class QProgressDialog;
 class QStackedWidget;
 class QScrollArea;
 QT_END_NAMESPACE
@@ -76,6 +78,7 @@ private:
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
+    MultisigDialog *multisigPage;
     MasternodeManager *masternodeManagerPage;
     MessagePage *messagePage;
     QLabel* netLabel;
@@ -87,6 +90,7 @@ private:
     QLabel *labelBlocksIcon;
     QLabel *progressBarLabel;
     QProgressBar *progressBar;
+    QProgressDialog *progressDialog;
 
     QMenuBar *appMenuBar;
     QAction *overviewAction;
@@ -96,6 +100,7 @@ private:
     QAction *addressBookAction;
     QAction *signMessageAction;
     QAction *verifyMessageAction;
+    QAction *multisigAction;
     QAction *aboutAction;
     QAction *receiveCoinsAction;
     QAction *optionsAction;
@@ -112,6 +117,7 @@ private:
     QAction *messageAction;
     QAction *blockAction;
     QAction *TradingAction;
+    QAction *showBackupsAction;
 
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
@@ -146,6 +152,8 @@ public slots:
     */
     void setEncryptionStatus(int status);
 
+    /** Notify the user of an error in the network or transaction handling code. */
+    void error(const QString &title, const QString &message, bool modal);
     /** Notify the user of an event from the core network or transaction handling code.
        @param[in] title     the message box / notification title
        @param[in] message   the displayed text
@@ -164,6 +172,8 @@ public slots:
     */
     void askFee(qint64 nFeeRequired, bool *payFee);
     void handleURI(QString strURI);
+
+    void gotoMultisigPage();
 
 private slots:
     /** Switch to overview (home) page */
@@ -223,6 +233,9 @@ private slots:
 
     /** called by a timer to check if fRequestShutdown has been set **/
     void detectShutdown();
+
+    /** Show progress dialog e.g. for verifychain */
+    void showProgress(const QString &title, int nProgress);
 };
 
 #endif // BITCOINGUI_H

@@ -7,8 +7,8 @@
 #include "txdb.h"
 #include "miner.h"
 #include "kernel.h"
-#include "masternode.h"
-
+#include "masternodeman.h"
+#include "masternode-payments.h"
 
 using namespace std;
 
@@ -143,7 +143,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
     // How much of the block should be dedicated to high-priority transactions,
     // included regardless of the fees they pay
-    unsigned int nBlockPrioritySize = GetArg("-blockprioritysize", 27000);
+    unsigned int nBlockPrioritySize = GetArg("-blockprioritysize", DEFAULT_BLOCK_PRIORITY_SIZE);
     nBlockPrioritySize = std::min(nBlockMaxSize, nBlockPrioritySize);
 
     // Minimum block size you want to create; block will be filled with free transactions
@@ -168,7 +168,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
     {
         LOCK2(cs_main, mempool.cs);
         CTxDB txdb("r");
-//>AMS<
+//>TX<
         // Priority order to process transactions
         list<COrphan> vOrphan; // list memory doesn't move
         map<uint256, vector<COrphan*> > mapDependers;
@@ -278,9 +278,6 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
             if (tx.nTime > GetAdjustedTime() || (fProofOfStake && tx.nTime > pblock->vtx[0].nTime))
                 continue;
 
-            // Transaction fee
-            int64_t nMinFee = GetMinFee(tx, nBlockSize, GMF_BLOCK);
-
             // Skip free transactions if we're past the minimum block size:
             if (fSortedByFee && (dFeePerKb < nMinTxFee) && (nBlockSize + nTxSize >= nBlockMinSize))
                 continue;
@@ -304,8 +301,6 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
                 continue;
 
             int64_t nTxFees = tx.GetValueIn(mapInputs)-tx.GetValueOut();
-            if (nTxFees < nMinFee)
-                continue;
 
             nTxSigOps += GetP2SHSigOpCount(tx, mapInputs);
             if (nBlockSigOps + nTxSigOps >= MAX_BLOCK_SIGOPS)
@@ -356,7 +351,7 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
 
         if (fDebug && GetBoolArg("-printpriority", false))
             LogPrintf("CreateNewBlock(): total size %u\n", nBlockSize);
-// >AMS<
+// >TX<
         if (!fProofOfStake)
             pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pindexPrev->nHeight + 1, nFees);
 
@@ -493,9 +488,9 @@ bool CheckStake(CBlock* pblock, CWallet& wallet)
         return error("CheckStake() : proof-of-stake checking failed");
 
     //// debug print
-    LogPrintf("CheckStake() : new proof-of-stake block found  \n  hash: %s \nproofhash: %s  \ntarget: %s\n", hashBlock.GetHex(), proofHash.GetHex(), hashTarget.GetHex());
-    LogPrintf("%s\n", pblock->ToString());
-    LogPrintf("out %s\n", FormatMoney(pblock->vtx[1].GetValueOut()));
+    LogPrint("coinstake", "CheckStake() : new proof-of-stake block found  \n  hash: %s \nproofhash: %s  \ntarget: %s\n", hashBlock.GetHex(), proofHash.GetHex(), hashTarget.GetHex());
+    LogPrint("coinstake", "%s\n", pblock->ToString());
+    LogPrint("coinstake", "out %s\n", FormatMoney(pblock->vtx[1].GetValueOut()));
 
     // Found a solution
     {
@@ -512,6 +507,17 @@ bool CheckStake(CBlock* pblock, CWallet& wallet)
         // Process this block the same as if we had received it from another node
         if (!ProcessBlock(NULL, pblock))
             return error("CheckStake() : ProcessBlock, block not accepted");
+        else
+        {
+            //ProcessBlock successful for PoS. now FixSpentCoins.
+            int nMismatchSpent;
+            CAmount nBalanceInQuestion;
+            wallet.FixSpentCoins(nMismatchSpent, nBalanceInQuestion);
+            if (nMismatchSpent != 0)
+            {
+                LogPrintf("PoS mismatched spent coins = %d and balance affects = %d \n", nMismatchSpent, nBalanceInQuestion);
+            }
+        }
     }
 
     return true;
@@ -522,7 +528,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("amsterdamcoin-miner");
+    RenameThread("transfer-miner");
 
     CReserveKey reservekey(pwallet);
 
@@ -536,7 +542,7 @@ void ThreadStakeMiner(CWallet *pwallet)
             MilliSleep(1000);
         }
 
-        while (vNodes.empty() || IsInitialBlockDownload())
+        while (vNodes.size() < 4 || IsInitialBlockDownload())
         {
             nLastCoinStakeSearchInterval = 0;
             fTryToSync = true;

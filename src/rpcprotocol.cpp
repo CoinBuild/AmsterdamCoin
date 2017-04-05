@@ -26,6 +26,9 @@ using namespace boost;
 using namespace boost::asio;
 using namespace json_spirit;
 
+// Number of bytes to allocate and read at most at once in post data
+const size_t POST_READ_SIZE = 256 * 1024;
+
 //
 // HTTP protocol
 //
@@ -37,7 +40,7 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
 {
     ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: amsterdamcoin-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: transfer-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: 127.0.0.1\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -60,7 +63,7 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
     if (nStatus == HTTP_UNAUTHORIZED)
         return strprintf("HTTP/1.0 401 Authorization Required\r\n"
             "Date: %s\r\n"
-            "Server: amsterdamcoin-json-rpc/%s\r\n"
+            "Server: transfer-json-rpc/%s\r\n"
             "WWW-Authenticate: Basic realm=\"jsonrpc\"\r\n"
             "Content-Type: text/html\r\n"
             "Content-Length: 296\r\n"
@@ -87,7 +90,7 @@ string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
             "Connection: %s\r\n"
             "Content-Length: %u\r\n"
             "Content-Type: application/json\r\n"
-            "Server: amsterdamcoin-json-rpc/%s\r\n"
+            "Server: transfer-json-rpc/%s\r\n"
             "\r\n"
             "%s",
         nStatus,
@@ -190,8 +193,17 @@ int ReadHTTPMessage(std::basic_istream<char>& stream, map<string,
     // Read message
     if (nLen > 0)
     {
-        vector<char> vch(nLen);
-        stream.read(&vch[0], nLen);
+        vector<char> vch;
+        size_t ptr = 0;
+        while (ptr < (size_t)nLen)
+        {
+            size_t bytes_to_read = std::min((size_t)nLen - ptr, POST_READ_SIZE);
+            vch.resize(ptr + bytes_to_read);
+            stream.read(&vch[ptr], bytes_to_read);
+            if (!stream) // Connection lost while reading
+                return HTTP_INTERNAL_SERVER_ERROR;
+            ptr += bytes_to_read;
+        }
         strMessageRet = string(vch.begin(), vch.end());
     }
 

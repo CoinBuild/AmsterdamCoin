@@ -24,20 +24,29 @@ struct SeedSpec6 {
 // Main network
 //
 
-// Convert the pnSeeds6 array into usable address objects.
-static void convertSeed6(std::vector<CAddress> &vSeedsOut, const SeedSpec6 *data, unsigned int count)
+// Convert the pnSeeds array into usable address objects.
+static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *data, unsigned int count, int port)
 {
-    // It'll only connect to one or two seed nodes because once it connects,
-    // it'll get a pile of addresses with newer timestamps.
-    // Seed nodes are given a random 'last seen time' of between one and two
-    // weeks ago.
-    const int64_t nOneWeek = 7*24*60*60;
-    for (unsigned int i = 0; i < count; i++)
+     // It'll only connect to one or two seed nodes because once it connects,
+     // it'll get a pile of addresses with newer timestamps.
+     // Seed nodes are given a random 'last seen time' of between one and two
+     // weeks ago.
+     const int64_t nOneWeek = 7*24*60*60;
+    for (unsigned int k = 0; k < count; ++k)
     {
-        struct in6_addr ip;
-        memcpy(&ip, data[i].addr, sizeof(ip));
-        CAddress addr(CService(ip, data[i].port));
-        addr.nTime = GetTime() - GetRand(nOneWeek) - nOneWeek;
+        struct in_addr ip;
+        unsigned int i = data[k], t;
+        
+        // -- convert to big endian
+        t =   (i & 0x000000ff) << 24u
+            | (i & 0x0000ff00) << 8u
+            | (i & 0x00ff0000) >> 8u
+            | (i & 0xff000000) >> 24u;
+        
+        memcpy(&ip, &t, sizeof(ip));
+        
+        CAddress addr(CService(ip, port));
+        addr.nTime = GetTime()-GetRand(nOneWeek)-nOneWeek;
         vSeedsOut.push_back(addr);
     }
 }
@@ -56,7 +65,15 @@ public:
         nDefaultPort = 61510;
         nRPCPort = 61511;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-		
+
+        // Build the genesis block. Note that the output of the genesis coinbase cannot
+        // be spent as it did not originally exist in the database.
+        //
+        //CBlock(hash=000001faef25dec4fbcf906e6242621df2c183bf232f263d0ba5b101911e4563, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=12630d16a97f24b287c8c2594dda5fb98c9e6c70fc61d44191931ea2aa08dc90, nTime=1393221600, nBits=1e0fffff, nNonce=164482, vtx=1, vchBlockSig=)
+        //  Coinbase(hash=12630d16a9, nTime=1393221600, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+        //    CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
+        //    CTxOut(empty)
+        //  vMerkleTree: 12630d16a9
         const char* pszTimestamp = "Oktober 27, 2015: A great new start for AmsterdamCoin.";
         std::vector<CTxIn> vin;
         vin.resize(1);
@@ -74,25 +91,28 @@ public:
         genesis.nNonce   = 156245;
 
         hashGenesisBlock = genesis.GetHash();
-		
-		// genesis.GetHash() == 00005e5044b1a81bef73dd7fc302fe157a3537ed5188401622f17e04efb16f20
-		// genesis.hashMerkleRoot == b86d3a400a5040d9e355b9ffb12cc1188c84fb8ac0da24f10d8323c2b87bf93a
-		// genesis.nTime = 1445966961 
-		// genesis.nNonce = 156245 
 
         assert(hashGenesisBlock == uint256("0x00005e5044b1a81bef73dd7fc302fe157a3537ed5188401622f17e04efb16f20"));
         assert(genesis.hashMerkleRoot == uint256("0xb86d3a400a5040d9e355b9ffb12cc1188c84fb8ac0da24f10d8323c2b87bf93a"));
 
         
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(83);
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(85);
-        base58Prefixes[SECRET_KEY] =     list_of(153);
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E);
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,83);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
+        base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,40);
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-        convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
-		
-		vSeeds.push_back(CDNSSeedData("amsterdamblockchain.info", "amsterdamblockchain.info"));
+        vSeeds.push_back(CDNSSeedData("First",  "amsterdamcoin.blockexplorer.pro"));
+
+        convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
+
+        nPoolMaxTransactions = 3;
+        //strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
+        //strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
+        strDarksendPoolDummyAddress = "afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy";
+        nLastPOWBlock = 90000000;
+        nPOSStartBlock = 1;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
@@ -123,7 +143,7 @@ public:
         pchMessageStart[2] = 0x4d;
         pchMessageStart[3] = 0x3e;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-        vAlertPubKey = ParseHex("042d13c076ed97528247bcff222989769437eb10cdb679228c9ae26e26900eb9fd053cd9f46a9a2894ad5ebbd551beda4bd23bd55023679be77f0bd3a16e6fbeba");
+        vAlertPubKey = ParseHex("04cc24ab003c828cdd9cf4db2ebbde8e1cecb3bbfa8b3127fcb9dd9b84d44112080827ed7c49a648af9fe788ff42e316aee665879c553f099e55299d6b54edd7e0");
         nDefaultPort = 27170;
         nRPCPort = 27171;
         strDataDir = "testnet";
@@ -137,14 +157,16 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(97);
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
-        base58Prefixes[SECRET_KEY]     = list_of(239);
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF);
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,97);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
+        base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,239);
+        base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,40);
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
-        convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
+        convertSeeds(vFixedSeeds, pnTestnetSeed, ARRAYLEN(pnTestnetSeed), nDefaultPort);
 
+        nLastPOWBlock = 0x7fffffff;
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
 };

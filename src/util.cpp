@@ -10,9 +10,11 @@
 #include "ui_interface.h"
 #include "uint256.h"
 #include "version.h"
-#include "masternodeconfig.h"
+#include "netbase.h"
+#include "allocators.h"
 
 #include <algorithm>
+
 
 #include <boost/date_time/posix_time/posix_time.hpp>
 
@@ -73,12 +75,14 @@ bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
 bool fLiteMode = false;
-int nInstantXDepth = 1;
+bool fEnableInstantX = true;
+int nInstantXDepth = 10;
 int nDarksendRounds = 2;
-int nAnonymizeAmsterdamCoinAmount = 500;
+int nAnonymizeTransferAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
+int nMasternodeMinProtocol = 0;
 bool fSucessfullyLoaded = false;
 bool fEnableDarksend = false;
 /** All denominations used by darksend */
@@ -110,8 +114,6 @@ void locking_callback(int mode, int i, const char* file, int line)
     }
 }
 
-LockedPageManager LockedPageManager::instance;
-
 // Init
 class CInit
 {
@@ -134,8 +136,6 @@ public:
     }
     ~CInit()
     {
-        // Securely erase the memory used by the PRNG
-        RAND_cleanup();
         // Shutdown OpenSSL library multithreading support
         CRYPTO_set_locking_callback(NULL);
         for (int i = 0; i < CRYPTO_num_locks(); i++)
@@ -145,12 +145,14 @@ public:
 }
 instance_of_cinit;
 
-
-
-
-
-
-
+bool GetRandBytes(unsigned char *buf, int num)
+{
+    if (RAND_bytes(buf, num) == 0) {
+        LogPrint("rand", "%s : OpenSSL RAND_bytes() failed with error: %s\n", __func__, ERR_error_string(ERR_get_error(), NULL));
+        return false;
+    }
+    return true;
+}
 
 void RandAddSeed()
 {
@@ -187,6 +189,34 @@ void RandAddSeedPerfmon()
 #endif
 }
 
+unsigned char static HexVal(unsigned char c)
+{
+    if ('0' <= c && c <= '9')
+        return c - '0';
+    else if ('a' <= c && c <= 'f')
+        return c - 'a' + 10;
+    else if ('A' <= c && c <= 'F')
+        return c - 'A' + 10;
+    else abort();
+}
+
+std::string Hex2Ascii(const std::string& in)
+{
+	std::string out;
+    out.clear();
+    out.reserve(in.length() / 2);
+    for (std::string::const_iterator p = in.begin(); p != in.end(); p++)
+    {
+       unsigned char c = HexVal(*p);
+       p++;
+       if (p == in.end()) break; // incomplete last digit - should report error
+       c = (c << 4) + HexVal(*p); // + takes precedence over <<
+       out.push_back(c);
+    }
+	
+	return out;
+}
+
 uint64_t GetRand(uint64_t nMax)
 {
     if (nMax == 0)
@@ -196,9 +226,9 @@ uint64_t GetRand(uint64_t nMax)
     // to give every possible output value an equal possibility
     uint64_t nRange = (std::numeric_limits<uint64_t>::max() / nMax) * nMax;
     uint64_t nRand = 0;
-    do
-        RAND_bytes((unsigned char*)&nRand, sizeof(nRand));
-    while (nRand >= nRange);
+    do {
+        GetRandBytes((unsigned char*)&nRand, sizeof(nRand));
+    } while (nRand >= nRange);
     return (nRand % nMax);
 }
 
@@ -210,16 +240,8 @@ int GetRandInt(int nMax)
 uint256 GetRandHash()
 {
     uint256 hash;
-    RAND_bytes((unsigned char*)&hash, sizeof(hash));
+    GetRandBytes((unsigned char*)&hash, sizeof(hash));
     return hash;
-}
-
-void GetRandBytes(unsigned char* buf, int num)
-{
-    if (RAND_bytes(buf, num) != 1) {
-        LogPrintf("%s: OpenSSL RAND_bytes() failed with error: %s\n", __func__, ERR_error_string(ERR_get_error(), NULL));
-        assert(false);
-    }
 }
 
 // LogPrintf() has been broken a couple of times now
@@ -420,7 +442,7 @@ string SanitizeString(const string& str)
     return strResult;
 }
 
-static const signed char phexdigit[256] =
+const signed char p_util_hexdigit[256] =
 { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
   -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
@@ -440,9 +462,9 @@ static const signed char phexdigit[256] =
 
 bool IsHex(const string& str)
 {
-    BOOST_FOREACH(unsigned char c, str)
+    BOOST_FOREACH(char c, str)
     {
-        if (phexdigit[c] < 0)
+        if (HexDigit(c) < 0)
             return false;
     }
     return (str.size() > 0) && (str.size()%2 == 0);
@@ -456,11 +478,11 @@ vector<unsigned char> ParseHex(const char* psz)
     {
         while (isspace(*psz))
             psz++;
-        signed char c = phexdigit[(unsigned char)*psz++];
+        signed char c = HexDigit(*psz++);
         if (c == (signed char)-1)
             break;
         unsigned char n = (c << 4);
-        c = phexdigit[(unsigned char)*psz++];
+        c = HexDigit(*psz++);
         if (c == (signed char)-1)
             break;
         n |= c;
@@ -1048,7 +1070,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "amsterdamcoin";
+    const char* pszModule = "transfer";
 #endif
     if (pex)
         return strprintf(
@@ -1078,13 +1100,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\AmsterdamCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\AmsterdamCoin
-    // Mac: ~/Library/Application Support/AmsterdamCoin
-    // Unix: ~/.amsterdamcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Transfer
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Transfer
+    // Mac: ~/Library/Application Support/Transfer
+    // Unix: ~/.transfer
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "AmsterdamCoin2";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Transfer";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1096,10 +1118,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "AmsterdamCoin2";
+    return pathRet / "Transfer";
 #else
     // Unix
-    return pathRet / ".amsterdamcoin2";
+    return pathRet / ".transfer";
 #endif
 #endif
 }
@@ -1148,7 +1170,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "amsterdamcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "transfer.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1156,7 +1178,7 @@ boost::filesystem::path GetConfigFile()
 boost::filesystem::path GetMasternodeConfigFile()
 {
     boost::filesystem::path pathConfigFile(GetArg("-mnconf", "masternode.conf"));
-    if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
+    if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir() / pathConfigFile;
     return pathConfigFile;
 }
 
@@ -1164,8 +1186,13 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
-    if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+    if (!streamConfig.good()){
+        // Create empty darksilk.conf if it does not excist
+        FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
+        if (configFile != NULL)
+            fclose(configFile);
+        return; // Nothing to read, so just return
+    }
 
     set<string> setOptions;
     setOptions.insert("*");
@@ -1188,7 +1215,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "amsterdamcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "transferd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1218,9 +1245,10 @@ bool RenameOver(boost::filesystem::path src, boost::filesystem::path dest)
 
 void FileCommit(FILE *fileout)
 {
-    fflush(fileout);                // harmless if redundantly called
+    fflush(fileout); // harmless if redundantly called
 #ifdef WIN32
-    _commit(_fileno(fileout));
+    HANDLE hFile = (HANDLE)_get_osfhandle(_fileno(fileout));
+    FlushFileBuffers(hFile);
 #else
     fsync(fileno(fileout));
 #endif
@@ -1270,8 +1298,17 @@ void ShrinkDebugFile()
             fclose(file);
         }
     }
+    else if (file != NULL)
+        fclose(file);
 }
 
+//
+// "Never go to sea with two chronometers; take one or three."
+// Our three time sources are:
+//  - System clock
+//  - Median of other nodes clocks
+//  - The user (asking the user to fix the system clock if the first two disagree)
+//
 static int64_t nMockTime = 0;  // For unit testing
 
 int64_t GetTime()
@@ -1286,6 +1323,74 @@ void SetMockTime(int64_t nMockTimeIn)
     nMockTime = nMockTimeIn;
 }
 
+static CCriticalSection cs_nTimeOffset;
+static int64_t nTimeOffset = 0;
+
+int64_t GetTimeOffset()
+{
+    LOCK(cs_nTimeOffset);
+    return nTimeOffset;
+}
+
+int64_t GetAdjustedTime()
+{
+    return GetTime() + GetTimeOffset();
+}
+
+void AddTimeData(const CNetAddr& ip, int64_t nTime)
+{
+    int64_t nOffsetSample = nTime - GetTime();
+
+    LOCK(cs_nTimeOffset);
+    // Ignore duplicates
+    static set<CNetAddr> setKnown;
+    if (!setKnown.insert(ip).second)
+        return;
+
+    // Add data
+    static CMedianFilter<int64_t> vTimeOffsets(200,0);
+    vTimeOffsets.input(nOffsetSample);
+    LogPrintf("Added time data, samples %d, offset %+d (%+d minutes)\n", vTimeOffsets.size(), nOffsetSample, nOffsetSample/60);
+    if (vTimeOffsets.size() >= 5 && vTimeOffsets.size() % 2 == 1)
+    {
+        int64_t nMedian = vTimeOffsets.median();
+        std::vector<int64_t> vSorted = vTimeOffsets.sorted();
+        // Only let other nodes change our time by so much
+        if (abs64(nMedian) < 70 * 60)
+        {
+            nTimeOffset = nMedian;
+        }
+        else
+        {
+            nTimeOffset = 0;
+
+            static bool fDone;
+            if (!fDone)
+            {
+                // If nobody has a time different than ours but within 5 minutes of ours, give a warning
+                bool fMatch = false;
+                BOOST_FOREACH(int64_t nOffset, vSorted)
+                    if (nOffset != 0 && abs64(nOffset) < 5 * 60)
+                        fMatch = true;
+
+                if (!fMatch)
+                {
+                    fDone = true;
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong AmsterdamCoin will not work properly.");
+                    strMiscWarning = strMessage;
+                    LogPrintf("*** %s\n", strMessage);
+                    uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);
+                }
+            }
+        }
+        if (fDebug) {
+            BOOST_FOREACH(int64_t n, vSorted)
+                LogPrintf("%+d  ", n);
+            LogPrintf("|  ");
+        }
+        LogPrintf("nTimeOffset = %+d  (%+d minutes)\n", nTimeOffset, nTimeOffset/60);
+    }
+}
 uint32_t insecure_rand_Rz = 11;
 uint32_t insecure_rand_Rw = 11;
 void seed_insecure_rand(bool fDeterministic)
@@ -1297,11 +1402,11 @@ void seed_insecure_rand(bool fDeterministic)
     } else {
         uint32_t tmp;
         do{
-            RAND_bytes((unsigned char*)&tmp,4);
+            GetRandBytes((unsigned char*)&tmp,4);
         }while(tmp==0 || tmp==0x9068ffffU);
         insecure_rand_Rz=tmp;
         do{
-            RAND_bytes((unsigned char*)&tmp,4);
+            GetRandBytes((unsigned char*)&tmp,4);
         }while(tmp==0 || tmp==0x464fffffU);
         insecure_rand_Rw=tmp;
     }
@@ -1389,5 +1494,3 @@ std::string DateTimeStrFormat(const char* pszFormat, int64_t nTime)
     ss << boost::posix_time::from_time_t(nTime);
     return ss.str();
 }
-
-

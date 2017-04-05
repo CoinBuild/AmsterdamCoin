@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About AmsterdamCoin</source>
-        <translation>O AmsterdamCoin</translation>
+        <source>About Transfer</source>
+        <translation>O Transfer</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;AmsterdamCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;AmsterdamCoin&lt;/b&gt; verzija</translation>
+        <source>&lt;b&gt;Transfer&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Transfer&lt;/b&gt; verzija</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The AmsterdamCoin developers</source>
+Copyright © 2014 The Transfer developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -58,8 +58,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your AmsterdamCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>To so vaši AmsterdamCoin naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
+        <source>These are your Transfer addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>To so vaši Transfer naslovi za prejemanje plačil. Priporočeno je da vsakemu pošiljatelju namenite drugega in tako dobite večji pregled nad svojimi nakazili.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -73,8 +73,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a AmsterdamCoin address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva AmsterdamCoin naslova</translation>
+        <source>Sign a message to prove you own a Transfer address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva Transfer naslova</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -88,8 +88,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified AmsterdamCoin address</source>
-        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim AmsterdamCoin naslovom</translation>
+        <source>Verify a message to ensure it was signed with a specified Transfer address</source>
+        <translation>Potrdi sporočilo, da zagotovite, da je bilo podpisano z izbranim Transfer naslovom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -256,8 +256,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>AmsterdamCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>AmsterdamCoin se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
+        <source>Transfer will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Transfer se bo sedaj zaprl, da dokonča proces šifriranje. Pomnite, da tudi šifriranje vaše denarnice ne more v celoti zaščititi vaših kovancev pred krajo z zlonamernimi programi in računalniškimi virusi, če ti okužijo vaš računalnik.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -350,8 +350,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about AmsterdamCoin</source>
-        <translation>Pokaži informacije o AmsterdamCoin</translation>
+        <source>Show information about Transfer</source>
+        <translation>Pokaži informacije o Transfer</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,13 +390,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a AmsterdamCoin address</source>
-        <translation>Pošlji kovance na AmsterdamCoin naslov</translation>
+        <source>Send coins to a Transfer address</source>
+        <translation>Pošlji kovance na Transfer naslov</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for AmsterdamCoin</source>
-        <translation>Spremeni nastavitve za AmsterdamCoin</translation>
+        <source>Modify configuration options for Transfer</source>
+        <translation>Spremeni nastavitve za Transfer</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -436,8 +436,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>AmsterdamCoin</source>
-        <translation>AmsterdamCoin</translation>
+        <source>Transfer</source>
+        <translation>Transfer</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -446,8 +446,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About AmsterdamCoin</source>
-        <translation>&amp;O AmsterdamCoin</translation>
+        <source>&amp;About Transfer</source>
+        <translation>&amp;O Transfer</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -498,13 +498,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>AmsterdamCoin client</source>
-        <translation>AmsterdamCoin program</translation>
+        <source>Transfer client</source>
+        <translation>Transfer program</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to AmsterdamCoin network</source>
-        <translation><numerusform>%n aktivne povezave na AmsterdamCoin omrežje</numerusform><numerusform>%n aktivnih povezav na AmsterdamCoin omrežje</numerusform><numerusform>%n aktivnih povezav na AmsterdamCoin omrežje</numerusform><numerusform>%n aktivnih povezav na AmsterdamCoin omrežje</numerusform></translation>
+        <source>%n active connection(s) to Transfer network</source>
+        <translation><numerusform>%n aktivne povezave na Transfer omrežje</numerusform><numerusform>%n aktivnih povezav na Transfer omrežje</numerusform><numerusform>%n aktivnih povezav na Transfer omrežje</numerusform><numerusform>%n aktivnih povezav na Transfer omrežje</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -598,8 +598,8 @@ Naslov: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid AmsterdamCoin address or malformed URI parameters.</source>
-        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega AmsterdamCoin naslova ali slabih parametrov URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Transfer address or malformed URI parameters.</source>
+        <translation>URI ne more biti razčlenjen! To se lahko zgodi zaradi neveljavnega Transfer naslova ali slabih parametrov URI.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -721,8 +721,8 @@ Naslov: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. AmsterdamCoin can no longer continue safely and will quit.</source>
-        <translation>Prišlo je do usodne napake. Program AmsterdamCoin se ne more več varno nadaljevati in se bo zato zaprl. </translation>
+        <source>A fatal error occurred. Transfer can no longer continue safely and will quit.</source>
+        <translation>Prišlo je do usodne napake. Program Transfer se ne more več varno nadaljevati in se bo zato zaprl. </translation>
     </message>
 </context>
 <context>
@@ -1055,8 +1055,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid AmsterdamCoin address.</source>
-        <translation>Vneseni naslov &quot;%1&quot; ni veljaven AmsterdamCoin naslov.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Transfer address.</source>
+        <translation>Vneseni naslov &quot;%1&quot; ni veljaven Transfer naslov.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1074,8 +1074,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>AmsterdamCoin-Qt</source>
-        <translation>AmsterdamCoin-Qt</translation>
+        <source>Transfer-Qt</source>
+        <translation>Transfer-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1147,13 +1147,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start AmsterdamCoin after logging in to the system.</source>
-        <translation>Avtomatično zaženi AmsterdamCoin ob zagonu sistema.</translation>
+        <source>Automatically start Transfer after logging in to the system.</source>
+        <translation>Avtomatično zaženi Transfer ob zagonu sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start AmsterdamCoin on system login</source>
-        <translation>&amp;Zaženi AmsterdamCoin ob prijavi v sistem</translation>
+        <source>&amp;Start Transfer on system login</source>
+        <translation>&amp;Zaženi Transfer ob prijavi v sistem</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1162,8 +1162,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the AmsterdamCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avtomatično odpri vrata na routerju za AmsterdamCoin program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
+        <source>Automatically open the Transfer client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avtomatično odpri vrata na routerju za Transfer program. To deluje le če vaš router podpira UPnP in je ta omogočen. </translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1172,8 +1172,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the AmsterdamCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Poveži se na AmsterdamCoin omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
+        <source>Connect to the Transfer network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Poveži se na Transfer omrežje skozi SOCKS proxy (npr. ko se povezujete prek Tora)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1247,8 +1247,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting AmsterdamCoin.</source>
-        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu AmsterdamCoin aplikacije. </translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Transfer.</source>
+        <translation>Tu lahko nastavite jezik uporabniškega vmesnika. Nastavitve bodo pričele delovati ob ponovnem zagonu Transfer aplikacije. </translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1314,8 +1314,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting AmsterdamCoin.</source>
-        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu AmsterdamCoin aplikacije</translation>
+        <source>This setting will take effect after restarting Transfer.</source>
+        <translation>Ta nastavitev bo pričela delovati ob ponovnem zagonu Transfer aplikacije</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1333,8 +1333,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AmsterdamCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z AmsterdamCoin omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Transfer network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazane informacije so morda zastarele. Vaša denarnica se avtomatično sinhronizira z Transfer omrežjem, ko je vzpostavljena povezava, toda ta proces še ni bil zaključen.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1407,7 +1407,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
+        <source>Cannot start transfer: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1575,8 +1575,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the AmsterdamCoin-Qt help message to get a list with possible AmsterdamCoin command-line options.</source>
-        <translation>Prikaži AmsterdamCoin-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice AmsterdamCoin aplikacije</translation>
+        <source>Show the Transfer-Qt help message to get a list with possible Transfer command-line options.</source>
+        <translation>Prikaži Transfer-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice Transfer aplikacije</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1595,13 +1595,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>AmsterdamCoin - Debug window</source>
-        <translation>AmsterdamCoin - okno za odpravljanje napak</translation>
+        <source>Transfer - Debug window</source>
+        <translation>Transfer - okno za odpravljanje napak</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>AmsterdamCoin Core</source>
-        <translation>AmsterdamCoin jedro</translation>
+        <source>Transfer Core</source>
+        <translation>Transfer jedro</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1610,8 +1610,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the AmsterdamCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Odpri AmsterdamCoin datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
+        <source>Open the Transfer debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Odpri Transfer datoteko zapisov odpravljanja napak iz trenutnega direktorija podatkov. Če so datoteke zapisov velike, to lahko traja nekaj sekund.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1620,8 +1620,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the AmsterdamCoin RPC console.</source>
-        <translation>Dobrodošli v AmsterdamCoin RPC konzoli.</translation>
+        <source>Welcome to the Transfer RPC console.</source>
+        <translation>Dobrodošli v Transfer RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1729,7 +1729,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 AMS</source>
+        <source>0.00 TX</source>
         <translation>123.456 AMS {0.00 ?}</translation>
     </message>
     <message>
@@ -1799,8 +1799,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 AMS</source>
-        <translation>123.456 AMS</translation>
+        <source>123.456 TX</source>
+        <translation>123.456 TX</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1814,8 +1814,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Vnesite AmsterdamCoin naslov (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Transfer naslov (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1914,8 +1914,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid AmsterdamCoin address</source>
-        <translation>OPOZORILO: Neveljaven AmsterdamCoin naslov</translation>
+        <source>WARNING: Invalid Transfer address</source>
+        <translation>OPOZORILO: Neveljaven Transfer naslov</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1947,7 +1947,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
+        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1988,8 +1988,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Vnesite AmsterdamCoin naslov (npr. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Transfer naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2012,8 +2012,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Naslov s katerim želite podpisati sporočilo (npr. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Naslov s katerim želite podpisati sporočilo (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2049,8 +2049,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this AmsterdamCoin address</source>
-        <translation>Podpišite sporočilo, kot dokazilo lastništva AmsterdamCoin naslova</translation>
+        <source>Sign the message to prove you own this Transfer address</source>
+        <translation>Podpišite sporočilo, kot dokazilo lastništva Transfer naslova</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2076,13 +2076,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Naslov s katerim je bilo podpisano sporočilo (npr. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Naslov s katerim je bilo podpisano sporočilo (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified AmsterdamCoin address</source>
-        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim AmsterdamCoin naslovom</translation>
+        <source>Verify the message to ensure it was signed with the specified Transfer address</source>
+        <translation>Potrdite sporočilo, da zagotovite, da je bilo podpisano z izbranim Transfer naslovom</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2092,8 +2092,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Vnesite AmsterdamCoin naslov (npr. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Vnesite Transfer naslov (npr. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2102,8 +2102,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter AmsterdamCoin signature</source>
-        <translation>Vnesite AmsterdamCoin podpis</translation>
+        <source>Enter Transfer signature</source>
+        <translation>Vnesite Transfer podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2681,8 +2681,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>AmsterdamCoin version</source>
-        <translation>AmsterdamCoin različica</translation>
+        <source>Transfer version</source>
+        <translation>Transfer različica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2691,7 +2691,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or amsterdamcoind</source>
+        <source>Send command to -server or transferd</source>
         <translation>Pošlji ukaz na -server ali blackoind</translation>
     </message>
     <message>
@@ -2711,13 +2711,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
-        <translation>Določi konfiguracijsko datoteko (privzeto: amsterdamcoin.conf)</translation>
+        <source>Specify configuration file (default: transfer.conf)</source>
+        <translation>Določi konfiguracijsko datoteko (privzeto: transfer.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: amsterdamcoind.pid)</source>
-        <translation>Določi pid datoteko (privzeto: amsterdamcoin.pid)</translation>
+        <source>Specify pid file (default: transferd.pid)</source>
+        <translation>Določi pid datoteko (privzeto: transfer.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2734,13 +2734,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=amsterdamcoinrpc
+rpcuser=transferrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2846,8 +2846,8 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong AmsterdamCoin will not work properly.</source>
-        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno AmsterdamCoin ne bo deloval.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Transfer will not work properly.</source>
+        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno Transfer ne bo deloval.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3153,7 +3153,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. AmsterdamCoin is shutting down.</source>
+        <source>Initialization sanity check failed. Transfer is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3218,13 +3218,13 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of AmsterdamCoin</source>
-        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo AmsterdamCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Transfer</source>
+        <translation>Napaka pri nalaganju wallet.dat: denarnica zahteva novejšo verzijo Transfer</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart AmsterdamCoin to complete</source>
-        <translation>Denarnica mora biti prepisana: ponovno odprite AmsterdamCoin za dokončanje</translation>
+        <source>Wallet needed to be rewritten: restart Transfer to complete</source>
+        <translation>Denarnica mora biti prepisana: ponovno odprite Transfer za dokončanje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3288,8 +3288,8 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. AmsterdamCoin is probably already running.</source>
-        <translation>Navezava v %s  na tem računalniku ni mogoča AmsterdamCoin aplikacija je verjetno že zagnana.</translation>
+        <source>Unable to bind to %s on this computer. Transfer is probably already running.</source>
+        <translation>Navezava v %s  na tem računalniku ni mogoča Transfer aplikacija je verjetno že zagnana.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3328,7 +3328,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. AmsterdamCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Transfer is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

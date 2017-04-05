@@ -68,7 +68,7 @@ static bool ThreadSafeAskFee(int64_t nFeeRequired, const std::string& strCaption
 {
     if(!guiref)
         return false;
-    if(nFeeRequired < MIN_TX_FEE || nFeeRequired <= nTransactionFee || fDaemon)
+    if(nFeeRequired < MIN_TX_FEE || nFeeRequired <= nTransactionFee)
         return true;
     bool payFee = false;
 
@@ -102,7 +102,7 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. AmsterdamCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Transfer can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
@@ -124,8 +124,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 #ifndef BITCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
-    fHaveGUI = true;
-
+	fHaveGUI = true;
     // Command-line options take precedence:
     ParseParameters(argc, argv);
 
@@ -161,7 +160,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "AmsterdamCoin",
+        QMessageBox::critical(0, "Transfer",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -169,12 +168,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("AmsterdamCoin");
+    app.setOrganizationName("Transfer");
     //XXX app.setOrganizationDomain("");
     if(GetBoolArg("-testnet", false)) // Separate UI settings for testnet
-        app.setApplicationName("AmsterdamCoin-Qt-testnet");
+        app.setApplicationName("Transfer-Qt-testnet");
     else
-        app.setApplicationName("AmsterdamCoin-Qt");
+        app.setApplicationName("Transfer-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;

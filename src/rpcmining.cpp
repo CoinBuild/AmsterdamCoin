@@ -46,7 +46,7 @@ Value getsubsidy(const Array& params, bool fHelp)
             "getsubsidy [nTarget]\n"
             "Returns proof-of-work subsidy value for the specified value of target.");
 
-    return (uint64_t)GetProofOfWorkReward(pindexBest->nHeight, 0);
+    return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0);
 }
 
 Value getstakesubsidy(const Array& params, bool fHelp)
@@ -73,7 +73,7 @@ Value getstakesubsidy(const Array& params, bool fHelp)
     if (!tx.GetCoinAge(txdb, pindexBest, nCoinAge))
         throw JSONRPCError(RPC_MISC_ERROR, "GetCoinAge failed");
 
-    return (uint64_t)GetProofOfStakeReward(pindexBest, nCoinAge, 0);
+    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0);
 }
 
 Value getmininginfo(const Array& params, bool fHelp)
@@ -92,12 +92,12 @@ Value getmininginfo(const Array& params, bool fHelp)
     obj.push_back(Pair("currentblocksize",(uint64_t)nLastBlockSize));
     obj.push_back(Pair("currentblocktx",(uint64_t)nLastBlockTx));
 
-    diff.push_back(Pair("proof-of-work",        GetDifficulty()));
-    diff.push_back(Pair("proof-of-stake",       GetDifficulty(GetLastBlockIndex(pindexBest, true))));
-    diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
-    obj.push_back(Pair("difficulty",    diff));
+    //diff.push_back(Pair("proof-of-work",        GetDifficulty()));
+    //diff.push_back(Pair("proof-of-stake",       GetDifficulty(GetLastBlockIndex(pindexBest, true))));
+    //diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
+    obj.push_back(Pair("difficulty",    GetDifficulty(GetLastBlockIndex(pindexBest, true))));
 
-    obj.push_back(Pair("blockvalue",    (uint64_t)GetProofOfWorkReward(pindexBest->nHeight, 0)));
+    obj.push_back(Pair("blockvalue",    (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0)));
     obj.push_back(Pair("netmhashps",     GetPoWMHashPS()));
     obj.push_back(Pair("netstakeweight", GetPoSKernelPS()));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));
@@ -127,9 +127,11 @@ Value getstakinginfo(const Array& params, bool fHelp)
 
     uint64_t nNetworkWeight = GetPoSKernelPS();
     bool staking = nLastCoinStakeSearchInterval && nWeight;
-
-    nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
-    
+    if(pindexBest->nHeight <= HARD_FORK_BLOCK){
+        nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
+    } else {
+        nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
+    }
 
     Object obj;
 
@@ -166,10 +168,10 @@ Value checkkernel(const Array& params, bool fHelp)
     bool fCreateBlockTemplate = params.size() > 1 ? params[1].get_bool() : false;
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "AmsterdamCoin is not connected!");
+        throw JSONRPCError(-9, "Transfer is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "AmsterdamCoin is downloading blocks...");
+        throw JSONRPCError(-10, "Transfer is downloading blocks...");
 
     COutPoint kernel;
     CBlockIndex* pindexPrev = pindexBest;
@@ -247,10 +249,13 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "AmsterdamCoin is not connected!");
+        throw JSONRPCError(-9, "Transfer is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "AmsterdamCoin is downloading blocks...");
+        throw JSONRPCError(-10, "Transfer is downloading blocks...");
+
+    if (pindexBest->nHeight >= Params().LastPOWBlock())
+        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;
@@ -378,10 +383,13 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "AmsterdamCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Transfer is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AmsterdamCoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Transfer is downloading blocks...");
+
+    if (pindexBest->nHeight >= Params().LastPOWBlock())
+        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -498,6 +506,14 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"sizelimit\" : limit of block size\n"
             "  \"bits\" : compressed target of next block\n"
             "  \"height\" : height of the next block\n"
+            "  \"payee\" : \"xxx\",                (string) required payee for the next block\n"
+            "  \"payee_amount\" : n,               (numeric) required amount to pay\n"
+            "  \"votes\" : [\n                     (array) show vote candidates\n"
+            "        { ... }                       (json object) vote candidate\n"
+            "        ,...\n"
+            "  ],\n"
+            "  \"masternode_payments\" : true|false,         (boolean) true, if masternode payments are enabled"
+            "  \"enforce_masternode_payments\" : true|false  (boolean) true, if masternode payments are enforced"
             "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
 
     std::string strMode = "template";
@@ -519,10 +535,13 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "AmsterdamCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Transfer is not connected!");
 
     //if (IsInitialBlockDownload())
-    //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AmsterdamCoin is downloading blocks...");
+    //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Transfer is downloading blocks...");
+
+    if (pindexBest->nHeight >= Params().LastPOWBlock())
+        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
 
     // Update block
     static unsigned int nTransactionsUpdatedLast;

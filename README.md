@@ -1,37 +1,8 @@
-AmsterdamCoin integration/staging tree
-================================
 
-http://www.amsterdamcoin.com
+Transfer is a PoS-based cryptocurrency.
 
-Copyright (c) 2009-2015 Bitcoin Developers
-Copyright (c) 2011-2015 AmsterdamCoin Developers
-
-What is AmsterdamCoin?
-
-The goal of AmsterdamCoin is to be the most accepted crypto currency of Amsterdam. We have an excellent development team with over 15 years of experience and are able to deliver great new features. Not only will AmsterdamCoin be the most accepted currency, it will also be the most innovative. We listen to our users and accept new feature requests. 
-
-AmsterdamCoin is a PoS and PoW (Hybrid) cryptocurrency.
-
-Algorithm: Quark
-Block Spacing: 60 Seconds
-Stake Minimum Age: 24 Hours
-PoW block reward: 10 AMS
-PoS block reward: 1 AMS (8% anually)
-
-
-PoW block reward 10 AMS halving every 840000 blocks
-PoS 8% reward
-Masternodes (50% of PoS blocks) 100000 AMS collateral
-Automatic TOR client
-Encrypted messages
-Stealth Address
-Darksend
-60 seconds block time
-24 hours staking time
-RPC Port 61511
-P2P Port 61510
-
-AmsterdamCoin uses libsecp256k1,
+Transfer uses libsecp256k1,
+			  libgmp,
 			  Boost1.55,
 			  OR Boost1.57,  
 			  Openssl1.01p,
@@ -39,3 +10,61 @@ AmsterdamCoin uses libsecp256k1,
 			  QT5 to compile
 
 
+Block Spacing: 60 Seconds
+Stake Minimum Age: 24 Hours
+
+Port: 17170
+RPC Port: 17171
+
+
+BUILD LINUX
+-----------
+1) git clone https://github.com/transferdev/AmsterdamCoin.git amsterdamcoin
+
+2) cd amsterdamcoin/src
+
+3) sudo make -f makefile.unix            # Headless transfer
+
+(optional)
+
+4) strip transferd
+
+5) sudo cp transferd /usr/local/bin
+
+
+
+
+BUILD WINDOWS
+-------------
+
+1) Download Qt.zip from https://github.com/transferdev/AmsterdamCoin/releases/tag/1.2.3B and unpack to C:/
+
+2) Download AmsterdamCoin source from https://github.com/transferdev/AmsterdamCoin/archive/master.zip 
+
+2.1) Unpack to C:/AmsterdamCoin
+
+3) Install Perl for windows from the homepage http://www.activestate.com/activeperl/downloads
+
+4) Download Python 2.7 https://www.python.org/downloads/windows/
+
+4.1) While installing python make sure to add python.exe to the path.
+
+5) Run msys.bat located in C:\MinGW49-32\msys\1.0
+
+6) cd /C/AmsterdamCoin/src/leveldb
+
+7) Type "TARGET_OS=NATIVE_WINDOWS make libleveldb.a libmemenv.a" and hit enter to build leveldb
+
+8) Exit msys shell
+
+9) Open windows command prompt
+
+10) cd C:/dev
+
+11) Type "49-32-qt5.bat" and hit enter to run
+
+12) cd ../AmsterdamCoin
+
+13) Type "qmake USE_UPNP=0" and hit enter to run
+
+14) Type "mingw32-make" and hit enter to start building. When it's finished you can find your .exe in the release folder.

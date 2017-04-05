@@ -3,22 +3,22 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About AmsterdamCoin</source>
-        <translation>О AmsterdamCoin</translation>
+        <source>About Transfer</source>
+        <translation>О Transfer</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;AmsterdamCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;AmsterdamCoin&lt;/b&gt; версия</translation>
+        <source>&lt;b&gt;Transfer&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Transfer&lt;/b&gt; версия</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The AmsterdamCoin developers</source>
+Copyright © 2014 The Transfer developers</source>
         <translation>Все права защищены © 2009-2014 Разработчики Bitcoin
 Все права защищены © 2012-2014 Разработчики NovaCoin
-Все права защищены © 2014 Разработчики AmsterdamCoin</translation>
+Все права защищены © 2014 Разработчики Transfer</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -60,7 +60,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your AmsterdamCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your Transfer addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>Это Ваши адреса для получения платежей. Вы можете дать разные адреса отправителям, чтобы отслеживать, кто именно вам платит.</translation>
     </message>
     <message>
@@ -75,8 +75,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a AmsterdamCoin address</source>
-        <translation>Подписать сообщение, чтобы доказать владение адресом AmsterdamCoin</translation>
+        <source>Sign a message to prove you own a Transfer address</source>
+        <translation>Подписать сообщение, чтобы доказать владение адресом Transfer</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -90,8 +90,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified AmsterdamCoin address</source>
-        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом AmsterdamCoin</translation>
+        <source>Verify a message to ensure it was signed with a specified Transfer address</source>
+        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом Transfer</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,7 +258,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>AmsterdamCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <source>Transfer will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши монеты от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
@@ -352,8 +352,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about AmsterdamCoin</source>
-        <translation>Показать информацию о AmsterdamCoin&apos;е</translation>
+        <source>Show information about Transfer</source>
+        <translation>Показать информацию о Transfer&apos;е</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -392,13 +392,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a AmsterdamCoin address</source>
-        <translation>Отправить монеты на указанный адрес AmsterdamCoin</translation>
+        <source>Send coins to a Transfer address</source>
+        <translation>Отправить монеты на указанный адрес Transfer</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for AmsterdamCoin</source>
-        <translation>Изменить параметры конфигурации AmsterdamCoin</translation>
+        <source>Modify configuration options for Transfer</source>
+        <translation>Изменить параметры конфигурации Transfer</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -438,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>AmsterdamCoin</source>
-        <translation>AmsterdamCoin</translation>
+        <source>Transfer</source>
+        <translation>Transfer</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -448,8 +448,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About AmsterdamCoin</source>
-        <translation>&amp;О AmsterdamCoin</translation>
+        <source>&amp;About Transfer</source>
+        <translation>&amp;О Transfer</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,12 +500,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>AmsterdamCoin client</source>
-        <translation>AmsterdamCoin клиент</translation>
+        <source>Transfer client</source>
+        <translation>Transfer клиент</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to AmsterdamCoin network</source>
+        <source>%n active connection(s) to Transfer network</source>
         <translation><numerusform>%n активное соединение с сетью</numerusform><numerusform>%n активных соединений с сетью</numerusform><numerusform>%n активных соединений с сетью</numerusform></translation>
     </message>
     <message>
@@ -600,8 +600,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid AmsterdamCoin address or malformed URI parameters.</source>
-        <translation>Не удалось обработать URI! Это может быть связано с неверным адресом AmsterdamCoin или неправильными параметрами URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Transfer address or malformed URI parameters.</source>
+        <translation>Не удалось обработать URI! Это может быть связано с неверным адресом Transfer или неправильными параметрами URI.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -723,8 +723,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. AmsterdamCoin can no longer continue safely and will quit.</source>
-        <translation>Произошла неисправимая ошибка. AmsterdamCoin не может безопасно продолжать работу и будет закрыт.</translation>
+        <source>A fatal error occurred. Transfer can no longer continue safely and will quit.</source>
+        <translation>Произошла неисправимая ошибка. Transfer не может безопасно продолжать работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -1043,8 +1043,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid AmsterdamCoin address.</source>
-        <translation>Введённый адрес &quot;%1&quot; не является правильным AmsterdamCoin-адресом.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Transfer address.</source>
+        <translation>Введённый адрес &quot;%1&quot; не является правильным Transfer-адресом.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1062,8 +1062,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>AmsterdamCoin-Qt</source>
-        <translation>AmsterdamCoin-Qt</translation>
+        <source>Transfer-Qt</source>
+        <translation>Transfer-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1135,13 +1135,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start AmsterdamCoin after logging in to the system.</source>
-        <translation>Автоматически запускать AmsterdamCoin после входа в систему</translation>
+        <source>Automatically start Transfer after logging in to the system.</source>
+        <translation>Автоматически запускать Transfer после входа в систему</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start AmsterdamCoin on system login</source>
-        <translation>&amp;Запускать AmsterdamCoin при входе в систему</translation>
+        <source>&amp;Start Transfer on system login</source>
+        <translation>&amp;Запускать Transfer при входе в систему</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1150,8 +1150,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the AmsterdamCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть порт для AmsterdamCoin-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
+        <source>Automatically open the Transfer client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть порт для Transfer-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1160,8 +1160,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the AmsterdamCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Подключаться к сети AmsterdamCoin через прокси SOCKS (например, при подключении через Tor).</translation>
+        <source>Connect to the Transfer network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Подключаться к сети Transfer через прокси SOCKS (например, при подключении через Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1235,8 +1235,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting AmsterdamCoin.</source>
-        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска AmsterdamCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Transfer.</source>
+        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска Transfer.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1302,8 +1302,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting AmsterdamCoin.</source>
-        <translation>Эта настройка вступит в силу после перезапуска AmsterdamCoin</translation>
+        <source>This setting will take effect after restarting Transfer.</source>
+        <translation>Эта настройка вступит в силу после перезапуска Transfer</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1321,8 +1321,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AmsterdamCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью AmsterdamCoin после подключения, но этот процесс пока не завершён.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Transfer network after a connection is established, but this process has not completed yet.</source>
+        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью Transfer после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
         <location line="-173"/>
@@ -1395,7 +1395,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
+        <source>Cannot start transfer: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1563,8 +1563,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the AmsterdamCoin-Qt help message to get a list with possible AmsterdamCoin command-line options.</source>
-        <translation>Показать помощь по AmsterdamCoin-Qt, чтобы получить список доступных параметров командной строки.</translation>
+        <source>Show the Transfer-Qt help message to get a list with possible Transfer command-line options.</source>
+        <translation>Показать помощь по Transfer-Qt, чтобы получить список доступных параметров командной строки.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1583,13 +1583,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>AmsterdamCoin - Debug window</source>
-        <translation>AmsterdamCoin - Окно отладки</translation>
+        <source>Transfer - Debug window</source>
+        <translation>Transfer - Окно отладки</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>AmsterdamCoin Core</source>
-        <translation>Ядро AmsterdamCoin</translation>
+        <source>Transfer Core</source>
+        <translation>Ядро Transfer</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -1598,8 +1598,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the AmsterdamCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть отладочный лог-файл AmsterdamCoin из текущего каталога данных. Это может занять несколько секунд для больших лог-файлов.</translation>
+        <source>Open the Transfer debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть отладочный лог-файл Transfer из текущего каталога данных. Это может занять несколько секунд для больших лог-файлов.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1608,8 +1608,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the AmsterdamCoin RPC console.</source>
-        <translation>Добро пожаловать в RPC-консоль AmsterdamCoin.</translation>
+        <source>Welcome to the Transfer RPC console.</source>
+        <translation>Добро пожаловать в RPC-консоль Transfer.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1717,7 +1717,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 AMS</source>
+        <source>0.00 TX</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1787,8 +1787,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 AMS</source>
-        <translation>123.456 AMS</translation>
+        <source>123.456 TX</source>
+        <translation>123.456 TX</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1802,8 +1802,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Введите AmsterdamCoin-адрес (например afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Введите Transfer-адрес (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1902,7 +1902,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid AmsterdamCoin address</source>
+        <source>WARNING: Invalid Transfer address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1935,8 +1935,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Адрес получателя платежа (например afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Адрес получателя платежа (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1976,8 +1976,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Введите AmsterdamCoin-адрес (например afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Введите Transfer-адрес (например B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2000,8 +2000,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Адрес, которым вы хотите подписать сообщение  (напр. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Адрес, которым вы хотите подписать сообщение  (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2037,8 +2037,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this AmsterdamCoin address</source>
-        <translation>Подписать сообщение, чтобы доказать владение адресом AmsterdamCoin</translation>
+        <source>Sign the message to prove you own this Transfer address</source>
+        <translation>Подписать сообщение, чтобы доказать владение адресом Transfer</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2064,13 +2064,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Адрес, которым было подписано сообщение (напр. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Адрес, которым было подписано сообщение (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified AmsterdamCoin address</source>
-        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом AmsterdamCoin</translation>
+        <source>Verify the message to ensure it was signed with the specified Transfer address</source>
+        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом Transfer</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2080,8 +2080,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Введите адрес AmsterdamCoin (напр. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a Transfer address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Введите адрес Transfer (напр. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2090,8 +2090,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter AmsterdamCoin signature</source>
-        <translation>Введите подпись AmsterdamCoin</translation>
+        <source>Enter Transfer signature</source>
+        <translation>Введите подпись Transfer</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2669,7 +2669,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>AmsterdamCoin version</source>
+        <source>Transfer version</source>
         <translation>Версия</translation>
     </message>
     <message>
@@ -2679,8 +2679,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or amsterdamcoind</source>
-        <translation>Отправить команду на -server или amsterdamcoind</translation>
+        <source>Send command to -server or transferd</source>
+        <translation>Отправить команду на -server или transferd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2700,13 +2700,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
-        <translation>Указать конфигурационный файл (по умолчанию: amsterdamcoin.conf)</translation>
+        <source>Specify configuration file (default: transfer.conf)</source>
+        <translation>Указать конфигурационный файл (по умолчанию: transfer.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: amsterdamcoind.pid)</source>
-        <translation>Указать pid-файл (по умолчанию: amsterdamcoind.pid)</translation>
+        <source>Specify pid file (default: transferd.pid)</source>
+        <translation>Указать pid-файл (по умолчанию: transferd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2723,13 +2723,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=amsterdamcoinrpc
+rpcuser=transferrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Transfer Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2835,8 +2835,8 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong AmsterdamCoin will not work properly.</source>
-        <translation>Внимание: убедитесь, что дата и время на Вашем компьютере выставлены верно. Если Ваши часы идут неправильно, AmsterdamCoin будет работать некорректно.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Transfer will not work properly.</source>
+        <translation>Внимание: убедитесь, что дата и время на Вашем компьютере выставлены верно. Если Ваши часы идут неправильно, Transfer будет работать некорректно.</translation>
     </message>
     <message>
         <location line="+132"/>
@@ -3142,7 +3142,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+10"/>
-        <source>Initialization sanity check failed. AmsterdamCoin is shutting down.</source>
+        <source>Initialization sanity check failed. Transfer is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3207,13 +3207,13 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of AmsterdamCoin</source>
-        <translation>Ошибка загрузки wallet.dat: бумажник требует более новую версию AmsterdamCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Transfer</source>
+        <translation>Ошибка загрузки wallet.dat: бумажник требует более новую версию Transfer</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart AmsterdamCoin to complete</source>
-        <translation>Необходимо перезаписать бумажник, перезапустите AmsterdamCoin для завершения операции</translation>
+        <source>Wallet needed to be rewritten: restart Transfer to complete</source>
+        <translation>Необходимо перезаписать бумажник, перезапустите Transfer для завершения операции</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3277,8 +3277,8 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+125"/>
-        <source>Unable to bind to %s on this computer. AmsterdamCoin is probably already running.</source>
-        <translation>Невозможно привязаться к %s на этом компьютере.  Возможно, AmsterdamCoin уже работает.</translation>
+        <source>Unable to bind to %s on this computer. Transfer is probably already running.</source>
+        <translation>Невозможно привязаться к %s на этом компьютере.  Возможно, Transfer уже работает.</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -3317,7 +3317,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. AmsterdamCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Transfer is probably already running.</source>
         <translation>Невозможно установить блокировку на рабочую директорию %s.  Возможно, бумажник уже запущен.</translation>
     </message>
     <message>

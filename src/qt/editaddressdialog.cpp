@@ -6,6 +6,7 @@
 
 #include <QDataWidgetMapper>
 #include <QMessageBox>
+#include <QClipboard>
 
 EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     QDialog(parent),
@@ -113,7 +114,7 @@ void EditAddressDialog::accept()
             break;
         case AddressTableModel::INVALID_ADDRESS:
             QMessageBox::warning(this, windowTitle(),
-                tr("The entered address \"%1\" is not a valid AmsterdamCoin address.").arg(ui->addressEdit->text()),
+                tr("The entered address \"%1\" is not a valid Transfer address.").arg(ui->addressEdit->text()),
                 QMessageBox::Ok, QMessageBox::Ok);
             break;
         case AddressTableModel::DUPLICATE_ADDRESS:
@@ -147,4 +148,10 @@ void EditAddressDialog::setAddress(const QString &address)
 {
     this->address = address;
     ui->addressEdit->setText(address);
+}
+
+void EditAddressDialog::on_EditAddressPasteButton_clicked()
+{
+    // Paste text from clipboard into recipient field
+    ui->addressEdit->setText(QApplication::clipboard()->text());
 }
