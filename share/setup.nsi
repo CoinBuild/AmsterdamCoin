@@ -20,7 +20,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER NovaCoin
-#!define MUI_FINISHPAGE_RUN $INSTDIR\novacoin-qt.exe
+#!define MUI_FINISHPAGE_RUN $INSTDIR\amsterdamcoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,7 +45,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile novacoin-0.3.0-win32-setup.exe
+OutFile amsterdamcoin-0.3.0-win32-setup.exe
 InstallDir $PROGRAMFILES\NovaCoin
 CRCCheck on
 XPStyle on
@@ -66,7 +66,7 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    #File ../release/novacoin-qt.exe
+    #File ../release/amsterdamcoin-qt.exe
     File /oname=license.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
@@ -120,7 +120,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    #Delete /REBOOTOK $INSTDIR\novacoin-qt.exe
+    #Delete /REBOOTOK $INSTDIR\amsterdamcoin-qt.exe
     Delete /REBOOTOK $INSTDIR\license.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
