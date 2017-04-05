@@ -3,6 +3,7 @@ release/*
 Makefile
 *.Debug
 *.Release
+src/obj/*
 src/qt/locale/*.qm
 amsterdamcoind
 amsterdamcoin-qt
