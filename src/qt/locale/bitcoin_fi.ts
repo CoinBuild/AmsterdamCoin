@@ -1414,7 +1414,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2698,8 +2698,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
-        <translation>Syötä komento kohteeseen -server tai transferd</translation>
+        <source>Send command to -server or amsterdamcoind</source>
+        <translation>Syötä komento kohteeseen -server tai amsterdamcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2718,13 +2718,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>Määritä prosessitiedosto (oletus: transfer.pid)</translation>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>Määritä prosessitiedosto (oletus: amsterdamcoin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2741,7 +2741,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

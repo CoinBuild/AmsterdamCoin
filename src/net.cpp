@@ -630,7 +630,7 @@ void CNode::copyStats(CNodeStats &stats)
     stats.fSyncNode = (this == pnodeSync);
 
     // It is common for nodes with good ping times to suddenly become lagged,
-    // due to a new block arriving or other large transfer.
+    // due to a new block arriving or other large amsterdamcoin.
     // Merely reporting pingtime might fool the caller into thinking the node was still responsive,
     // since pingtime does not update until the ping is complete, which might take a while.
     // So, if a ping is taking an unusually long time in flight,

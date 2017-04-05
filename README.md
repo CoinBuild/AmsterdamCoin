@@ -13,23 +13,23 @@ AmsterdamCoin uses libsecp256k1,
 Block Spacing: 60 Seconds
 Stake Minimum Age: 24 Hours
 
-Port: 17170
-RPC Port: 17171
+Port: 61510
+RPC Port: 61511
 
 
 BUILD LINUX
 -----------
-1) git clone https://github.com/transferdev/AmsterdamCoin.git amsterdamcoin
+1) git clone https://github.com/CoinProjects/amsterdamcoin.git amsterdamcoin
 
 2) cd amsterdamcoin/src
 
-3) sudo make -f makefile.unix            # Headless transfer
+3) sudo make -f makefile.unix            # Headless amsterdamcoin
 
 (optional)
 
-4) strip transferd
+4) strip amsterdamcoind
 
-5) sudo cp transferd /usr/local/bin
+5) sudo cp amsterdamcoind /usr/local/bin
 
 
 
@@ -37,9 +37,9 @@ BUILD LINUX
 BUILD WINDOWS
 -------------
 
-1) Download Qt.zip from https://github.com/transferdev/AmsterdamCoin/releases/tag/1.2.3B and unpack to C:/
+1) Download Qt.zip from https://github.com/CoinProjects/AmsterdamCoin/releases/tag/1.2.3B and unpack to C:/
 
-2) Download AmsterdamCoin source from https://github.com/transferdev/AmsterdamCoin/archive/master.zip 
+2) Download AmsterdamCoin source from https://github.com/CoinProjects/AmsterdamCoin/archive/master.zip 
 
 2.1) Unpack to C:/AmsterdamCoin
 

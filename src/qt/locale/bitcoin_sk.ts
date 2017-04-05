@@ -1413,7 +1413,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation>AmsterdamCoin sa nedá spustiť: click-to-pay handler</translation>
     </message>
 </context>
@@ -2697,8 +2697,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
-        <translation>Pošli príkaz na -server alebo transferd</translation>
+        <source>Send command to -server or amsterdamcoind</source>
+        <translation>Pošli príkaz na -server alebo amsterdamcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2717,13 +2717,13 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>Zadajte konfiguračný súbor (predvolené: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>Zadajte konfiguračný súbor (predvolené: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>Zadajte pid súbor (predvolené: transferd.pid)</translation>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>Zadajte pid súbor (predvolené: amsterdamcoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2740,7 +2740,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2751,7 +2751,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
         <translation>%s, musíte nastaviť rpcpassword v konfiguračnom súbore:
 %s
 Doporučuje sa použiť nasledovné náhodne heslo:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (toto heslo si nemusíte pamätať)
 Užívateľské meno a heslo NESMIE byť rovnaké.

@@ -1,6 +1,6 @@
 Enabling SSL on original client daemon
 ======================================
-By default, AmsterdamCoin allows JSON-RPC commands to be sent to http://localhost:17171
+By default, AmsterdamCoin allows JSON-RPC commands to be sent to http://localhost:61511
 and accepts connections only from the localhost.
 
 JSON-RPC Over SSL Setup
@@ -9,14 +9,14 @@ It can be configured to allow HTTPS connections.  You must follow the steps belo
 for this to work properly.
 
 1. Setup a certificate and private key.  A self signed certificate will work.
-    * cd ~/.transfer
+    * cd ~/.amsterdamcoin
     * openssl genrsa -out server.pem 4096
     * openssl req -new -x509 -nodes -sha1 -days 3650 -key server.pem > server.cert
     (NOTE: you should NOT enter a passphrase)
 
 2. Configure NeosCoin to use SSL
-    * Stop your current transferd or transfer-qt
-    * Edit the transfer.conf and add
+    * Stop your current amsterdamcoind or amsterdamcoin-qt
+    * Edit the amsterdamcoin.conf and add
       rpcssl=1
 
 3. Restart AmsterdamCoin to make these changes take effect.

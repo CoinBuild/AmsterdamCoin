@@ -89,7 +89,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a transfer-qt executable will be
+Once these are installed, they will be found by configure and a amsterdamcoin-qt executable will be
 built by default.
 
 Berkeley DB
@@ -99,7 +99,7 @@ It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 ```bash
 TRANSFER_ROOT=$(pwd)
 
-# Pick some path to install BDB to, here we create a directory within the transfer directory
+# Pick some path to install BDB to, here we create a directory within the amsterdamcoin directory
 BDB_PREFIX="${TRANSFER_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
@@ -125,7 +125,7 @@ Notes
 -----
 1) You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-2) The release is built with GCC and then "strip transferd" to strip the debug
+2) The release is built with GCC and then "strip amsterdamcoind" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 To Build amsterdamcoind
@@ -135,13 +135,13 @@ With UPNP:
 
     cd src && \
     make -f makefile.unix && \
-    strip transferd
+    strip amsterdamcoind
 
 (Recommended) Without UPNP:
 
     cd src && \
     make -f makefile.unix USE_UPNP= && \
-    strip transferd
+    strip amsterdamcoind
 
 To Build AmsterdamCoin-QT
 --------
@@ -175,7 +175,7 @@ If you need to build miniupnpc yourself:
 
 Security
 --------
-To help make your transfer installation more secure by making certain attacks impossible to
+To help make your amsterdamcoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -192,7 +192,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     make -f makefile.unix ... -e PIE=1
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
-    scanelf -e ./transfer
+    scanelf -e ./amsterdamcoin
 
     The output should contain:
      TYPE
@@ -200,13 +200,13 @@ exploit even if a vulnerability is found, you can take the following measures:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, transfer should be built with a non-executable stack
+    vulnerable buffers are found. By default, amsterdamcoin should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    scanelf -e ./transfer
+    scanelf -e ./amsterdamcoin
 
     the output should contain:
     STK/REL/PTL

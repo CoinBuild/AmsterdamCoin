@@ -713,7 +713,7 @@ void tradingDialog::CalculateSellCostLabel(){
 
 void tradingDialog::CalculateCSReceiveLabel(){
 
-    //calculate amount of currency than can be transferred to bitcoin
+    //calculate amount of currency than can be amsterdamcoinred to bitcoin
     QString balance = GetBalance("TX");
     QString buyorders = GetOrderBook();
 

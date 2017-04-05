@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = transfer-qt
+TARGET = amsterdamcoin-qt
 VERSION = 1.2.3.1
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 QT += network printsupport

@@ -1070,7 +1070,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "transfer";
+    const char* pszModule = "amsterdamcoin";
 #endif
     if (pex)
         return strprintf(
@@ -1100,13 +1100,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Transfer
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Transfer
-    // Mac: ~/Library/Application Support/Transfer
-    // Unix: ~/.transfer
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\AmsterdamCoin2
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\AmsterdamCoin2
+    // Mac: ~/Library/Application Support/AmsterdamCoin2
+    // Unix: ~/.amsterdamcoin2
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "AmsterdamCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "AmsterdamCoin2";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1118,10 +1118,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "AmsterdamCoin";
+    return pathRet / "AmsterdamCoin2";
 #else
     // Unix
-    return pathRet / ".transfer";
+    return pathRet / ".amsterdamcoin2";
 #endif
 #endif
 }
@@ -1170,7 +1170,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "transfer.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "amsterdamcoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1215,7 +1215,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "transferd.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "amsterdamcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

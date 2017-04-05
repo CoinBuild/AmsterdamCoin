@@ -1407,7 +1407,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2691,7 +2691,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
+        <source>Send command to -server or amsterdamcoind</source>
         <translation>Pošlji ukaz na -server ali blackoind</translation>
     </message>
     <message>
@@ -2711,13 +2711,13 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>Določi konfiguracijsko datoteko (privzeto: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>Določi konfiguracijsko datoteko (privzeto: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>Določi pid datoteko (privzeto: transfer.pid)</translation>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>Določi pid datoteko (privzeto: amsterdamcoin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2734,7 +2734,7 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

@@ -1409,7 +1409,7 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2693,8 +2693,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
-        <translation>Envoyer commande à -server ou transferd</translation>
+        <source>Send command to -server or amsterdamcoind</source>
+        <translation>Envoyer commande à -server ou amsterdamcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>Spécifier le fichier de configuration (defaut: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>Spécifier le fichier de configuration (defaut: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>Spécifier le fichier pid (defaut: transferd.pid)
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>Spécifier le fichier pid (defaut: amsterdamcoind.pid)
 </translation>
     </message>
     <message>
@@ -2737,7 +2737,7 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

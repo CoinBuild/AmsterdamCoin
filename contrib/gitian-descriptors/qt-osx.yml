@@ -1,5 +1,5 @@
 ---
-name: "transfer-osx-qt"
+name: "amsterdamcoin-osx-qt"
 suites:
 - "trusty"
 architectures:
@@ -22,7 +22,7 @@ reference_datetime: "2011-01-30 00:00:00"
 remotes: []
 files:
 - "qt-everywhere-opensource-src-5.5.0.tar.xz"
-- "transfer-deps-osx-gitian.zip"
+- "amsterdamcoin-deps-osx-gitian.zip"
 - "flex-2.5.38.tar.gz"
 - "osxcross.tar.xz"
 script: |
@@ -66,9 +66,9 @@ script: |
   make install
   cd ..
   #
-  # Need mingw-compiled openssl from transfer-deps:
+  # Need mingw-compiled openssl from amsterdamcoin-deps:
   cd $DEPSDIR
-  unzip -o $BUILDDIR/transfer-deps-osx-gitian.zip
+  unzip -o $BUILDDIR/amsterdamcoin-deps-osx-gitian.zip
   tar xf $BUILDDIR/osxcross.tar.xz
   #
   cd $BUILDDIR

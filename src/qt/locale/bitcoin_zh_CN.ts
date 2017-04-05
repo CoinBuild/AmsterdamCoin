@@ -1407,7 +1407,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2691,8 +2691,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
-        <translation>向-server服务器或transferd发送命令</translation>
+        <source>Send command to -server or amsterdamcoind</source>
+        <translation>向-server服务器或amsterdamcoind发送命令</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2714,13 +2714,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>指定配置文件(默认: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>指定配置文件(默认: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>指定pid文件(默认: transferd.pid)</translation>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>指定pid文件(默认: amsterdamcoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2738,7 +2738,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -2749,7 +2749,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
         <translation>%s, 必须在配置文件里设置rpc密码:
  %s
 建议使用如下的随机密码:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (不需要记住该密码)
 用户名和密码不能重复。

@@ -108,7 +108,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // NovaCoin: check prefix
-    if(uri.scheme() != QString("transfer"))
+    if(uri.scheme() != QString("amsterdamcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -158,13 +158,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert transfer:// to transfer:
+    // Convert amsterdamcoin:// to amsterdamcoin:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("transfer://", Qt::CaseInsensitive))
+    if(uri.startsWith("amsterdamcoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "transfer:");
+        uri.replace(0, 11, "amsterdamcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -574,7 +574,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "transfer.desktop";
+    return GetAutostartDir() / "amsterdamcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -612,7 +612,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a transfer.desktop file to the autostart directory:
+        // Write a amsterdamcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         optionFile << "Name=Transfer\n";
@@ -634,7 +634,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the transfer app
+    // loop through the list of startup items and try to find the amsterdamcoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -668,7 +668,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add transfer app to startup item list
+        // add amsterdamcoin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {
@@ -690,7 +690,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
     header = tr("AmsterdamCoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  transfer-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  amsterdamcoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 

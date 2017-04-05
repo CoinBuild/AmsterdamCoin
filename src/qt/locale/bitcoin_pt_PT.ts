@@ -49,7 +49,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Copie o endereço selecionado para a área de transferência</translation>
+        <translation>Copie o endereço selecionado para a área de amsterdamcoinência</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -1393,7 +1393,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1960,7 +1960,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Cole endereço da área de transferência</translation>
+        <translation>Cole endereço da área de amsterdamcoinência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2016,7 +2016,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Cole endereço da área de transferência</translation>
+        <translation>Cole endereço da área de amsterdamcoinência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2031,7 +2031,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Copiar a assinatura actual para a área de transferência</translation>
+        <translation>Copiar a assinatura actual para a área de amsterdamcoinência</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2677,7 +2677,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
+        <source>Send command to -server or amsterdamcoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2697,12 +2697,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2720,7 +2720,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.

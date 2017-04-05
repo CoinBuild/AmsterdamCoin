@@ -1409,7 +1409,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start transfer: click-to-pay handler</source>
+        <source>Cannot start amsterdamcoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2010,7 +2010,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le transferati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
+        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le amsterdamcoinati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -2693,8 +2693,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or transferd</source>
-        <translation>Trimite comanda catre server sau transferd</translation>
+        <source>Send command to -server or amsterdamcoind</source>
+        <translation>Trimite comanda catre server sau amsterdamcoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2713,13 +2713,13 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: transfer.conf)</source>
-        <translation>Specifica fisier de configurare(implicit: transfer.conf)</translation>
+        <source>Specify configuration file (default: amsterdamcoin.conf)</source>
+        <translation>Specifica fisier de configurare(implicit: amsterdamcoin.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: transferd.pid)</source>
-        <translation>Speficica fisier pid(implicit: transfer.pid)</translation>
+        <source>Specify pid file (default: amsterdamcoind.pid)</source>
+        <translation>Speficica fisier pid(implicit: amsterdamcoin.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2736,7 +2736,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=transferrpc
+rpcuser=amsterdamcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
