@@ -167,8 +167,6 @@ OBJS= \
     obj/luffa.o \
     obj/aes_helper.o \
     obj/echo.o \
-    obj/shavite.o \
-    obj/simd.o \
     obj/blake.o\
     obj/bmw.o\
     obj/groestl.o\
