@@ -46,7 +46,9 @@ Value getsubsidy(const Array& params, bool fHelp)
             "getsubsidy [nTarget]\n"
             "Returns proof-of-work subsidy value for the specified value of target.");
 
-    return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0);
+	CTxDestination destination;
+    
+	return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination);
 }
 
 Value getstakesubsidy(const Array& params, bool fHelp)
@@ -73,7 +75,9 @@ Value getstakesubsidy(const Array& params, bool fHelp)
     if (!tx.GetCoinAge(txdb, pindexBest, nCoinAge))
         throw JSONRPCError(RPC_MISC_ERROR, "GetCoinAge failed");
 
-    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0);
+	CTxDestination destination;
+	
+    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0, destination);
 }
 
 Value getmininginfo(const Array& params, bool fHelp)
@@ -96,8 +100,8 @@ Value getmininginfo(const Array& params, bool fHelp)
     //diff.push_back(Pair("proof-of-stake",       GetDifficulty(GetLastBlockIndex(pindexBest, true))));
     //diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
     obj.push_back(Pair("difficulty",    GetDifficulty(GetLastBlockIndex(pindexBest, true))));
-
-    obj.push_back(Pair("blockvalue",    (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0)));
+	CTxDestination destination;
+    obj.push_back(Pair("blockvalue",    (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination)));
     obj.push_back(Pair("netmhashps",     GetPoWMHashPS()));
     obj.push_back(Pair("netstakeweight", GetPoSKernelPS()));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));

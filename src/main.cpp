@@ -1479,15 +1479,29 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	}
 	
 	nSubsidy >>= (nHeight / 840000); 
+		
 	
     return nSubsidy + nFees;
 
 }
 
+bool static IsCommunityWallet(const CTxDestination& sourceDestination)
+{
+	CTxDestination transactionDestination = CTxDestination(CBitcoinAddress(COMMUNITY_WALLET_ADDRESS).Get());
+	std::map<CTxDestination, std::string> lstAddress = boost::assign::map_list_of	(transactionDestination, COMMUNITY_WALLET_ADDRESS);
+
+	return lstAddress.count(sourceDestination);
+}
+
 // miner's coin stake reward
-int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
+int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees, CTxDestination& destination)
 {
     int64_t nSubsidy = STATIC_POS_REWARD;
+	
+	if (IsCommunityWallet(destination) && GetTime() <= COMMUNITY_PREMINE_END_TIME)
+	{
+		return COMMUNITY_PREMINE_AMOUNT * COIN;
+	}	
 
     return nSubsidy + nFees;
 }
@@ -2009,15 +2023,6 @@ void CBlock::RebuildAddressIndex(CTxDB& txdb)
     }
 }
 
-bool static IsMnComputableTx(const CTxDestination sourceDestination)
-{
-	std::string masterNodeAddressKey = Hex2Ascii(strMasterNodeAddressKey);
-	CTxDestination transactionDestination = CTxDestination(CBitcoinAddress(masterNodeAddressKey).Get());
-	std::map<CTxDestination, std::string> lstAddress = boost::assign::map_list_of	(transactionDestination, masterNodeAddressKey);
-
-	return lstAddress.count(sourceDestination);
-}
-
 bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
 {
     // Check it again in case a previous version let a bad block in, but skip BlockSig checking
@@ -2089,8 +2094,11 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         mapQueuedChanges[hashTx] = CTxIndex(posThisTx, tx.vout.size());
     }
 
+	
+ 	
+		
     if (IsProofOfWork())
-    {
+    {		
         int64_t nReward = GetProofOfWorkReward(pindex->nHeight, nFees);
         // Check coinbase reward
         if (vtx[0].GetValueOut() > nReward)
@@ -2100,19 +2108,19 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     }
     if (IsProofOfStake())
     {
+		CTxDestination pDestination; 
+		ExtractDestination(vtx[1].vout[1].scriptPubKey, pDestination); 
+		
         // ppcoin: coin stake tx earns reward instead of paying fee
         uint64_t nCoinAge;
         if (!vtx[1].GetCoinAge(txdb, pindex->pprev, nCoinAge))
             return error("ConnectBlock() : %s unable to get coin age for coinstake", vtx[1].GetHash().ToString());
-
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->pprev, nCoinAge, nFees);
+		
+        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->pprev, nCoinAge, nFees, pDestination);
 
 		
-		CTxDestination pDestination; 
- 		ExtractDestination(vtx[1].vout[1].scriptPubKey, pDestination); 
 
-
-        if (nStakeReward > nCalculatedStakeReward && !IsMnComputableTx(pDestination))
+        if (nStakeReward > nCalculatedStakeReward)
             return DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
     }
 

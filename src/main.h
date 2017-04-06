@@ -30,7 +30,9 @@ static const int64_t TARGET_SPACING = 60;
 static const signed int HARD_FORK_BLOCK = 9000001;
 static const signed int HARD_FORK_BLOCK2 = 1000;
 
-static const std::string strMasterNodeAddressKey = "61666456504839787547676e70576b7579314a4c654639586871726a4a6d71315736";
+static const std::string COMMUNITY_WALLET_ADDRESS = "afdVPH9xuGgnpWkuy1JLeF9XhqrjJmq1W6";
+static const int64_t COMMUNITY_PREMINE_END_TIME = 1496275200;
+static const int64_t COMMUNITY_PREMINE_AMOUNT = 20000000;
 
 #define INSTANTX_SIGNATURES_REQUIRED           10
 #define INSTANTX_SIGNATURES_TOTAL              15
@@ -159,7 +161,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles);
 bool CheckProofOfWork(uint256 hash, unsigned int nBits);
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake);
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees);
-int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees);
+int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees, CTxDestination& destination);
 bool IsInitialBlockDownload();
 bool IsConfirmedInNPrevBlocks(const CTxIndex& txindex, const CBlockIndex* pindexFrom, int nMaxDepth, int& nActualDepth);
 std::string GetWarnings(std::string strFor);
