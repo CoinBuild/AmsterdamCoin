@@ -1732,7 +1732,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
         <location line="+86"/>
         <location line="+32"/>
         <source>0.00 AMS</source>
-        <translation>123.456 TX</translation>
+        <translation>123.456 AMS</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1801,8 +1801,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 TX</source>
-        <translation>123.456 TX</translation>
+        <source>123.456 AMS</source>
+        <translation>123.456 AMS</translation>
     </message>
     <message>
         <location line="+31"/>

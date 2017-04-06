@@ -1787,8 +1787,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 TX</source>
-        <translation>123.456 TX</translation>
+        <source>123.456 AMS</source>
+        <translation>123.456 AMS</translation>
     </message>
     <message>
         <location line="+31"/>

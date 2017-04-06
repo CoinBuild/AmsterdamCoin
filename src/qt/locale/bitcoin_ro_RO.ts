@@ -1801,8 +1801,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 TX</source>
-        <translation>123.456 TX</translation>
+        <source>123.456 AMS</source>
+        <translation>123.456 AMS</translation>
     </message>
     <message>
         <location line="+31"/>

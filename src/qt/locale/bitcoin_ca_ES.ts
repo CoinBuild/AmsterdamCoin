@@ -1797,8 +1797,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 TX</source>
-        <translation>123.456 TX</translation>
+        <source>123.456 AMS</source>
+        <translation>123.456 AMS</translation>
     </message>
     <message>
         <location line="+31"/>
