@@ -1,8 +1,8 @@
 debug
 build
-Makefile.Release
-Makefile.Debug
-Makefile
+/Makefile.Release
+/Makefile.Debug
+/Makefile
 object_script.amsterdamcoin-qt.Debug
 object_script.amsterdamcoin-qt.Release
 amsterdamcoin.pro.user
