@@ -48,7 +48,7 @@ Value getsubsidy(const Array& params, bool fHelp)
 
 	CTxDestination destination;
     
-	return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination);
+	return (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination, GetLastBlockIndex(pindexBest, true)->nTime);
 }
 
 Value getstakesubsidy(const Array& params, bool fHelp)
@@ -77,7 +77,7 @@ Value getstakesubsidy(const Array& params, bool fHelp)
 
 	CTxDestination destination;
 	
-    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0, destination);
+    return (uint64_t)GetProofOfStakeReward(pindexBest->pprev, nCoinAge, 0, destination, GetLastBlockIndex(pindexBest, true)->nTime);
 }
 
 Value getmininginfo(const Array& params, bool fHelp)
@@ -101,7 +101,7 @@ Value getmininginfo(const Array& params, bool fHelp)
     //diff.push_back(Pair("search-interval",      (int)nLastCoinStakeSearchInterval));
     obj.push_back(Pair("difficulty",    GetDifficulty(GetLastBlockIndex(pindexBest, true))));
 	CTxDestination destination;
-    obj.push_back(Pair("blockvalue",    (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination)));
+    obj.push_back(Pair("blockvalue",    (int64_t)GetProofOfStakeReward(pindexBest->pprev, 0, 0, destination, GetLastBlockIndex(pindexBest, true)->nTime)));
     obj.push_back(Pair("netmhashps",     GetPoWMHashPS()));
     obj.push_back(Pair("netstakeweight", GetPoSKernelPS()));
     obj.push_back(Pair("errors",        GetWarnings("statusbar")));

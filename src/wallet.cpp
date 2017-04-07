@@ -3498,8 +3498,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             return error("CreateCoinStake : failed to calculate coin age");
 
 		CTxDestination destination;
-		//TODO nulll replace
-        nReward = GetProofOfStakeReward(pindexPrev, nCoinAge, nFees, destination);
+
+        nReward = GetProofOfStakeReward(pindexPrev, nCoinAge, nFees, destination, txNew.nTime);
         if (nReward <= 0)
             return false;
 
@@ -3524,7 +3524,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     CScript payee;
     CTxIn vin;
     bool hasPayment = true;
-    if(bMasterNodePayment) {
+    if(nReward == (STATIC_POS_REWARD + nFees) && bMasterNodePayment) {
         //spork
         if(!masternodePayments.GetBlockPayee(pindexPrev->nHeight+1, payee, vin)){
             CMasternode* winningNode = mnodeman.GetCurrentMasterNode(1);
@@ -3534,7 +3534,9 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
                 return error("CreateCoinStake: Failed to detect masternode to pay\n");
             }
         }
-    }
+    } else {
+		hasPayment = false;
+	}
 
     if(hasPayment){
         payments = txNew.vout.size() + 1;
@@ -3557,7 +3559,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     // Set output amount
     if (!hasPayment && txNew.vout.size() == 3) // 2 stake outputs, stake was split, no masternode payment
     {
-        txNew.vout[1].nValue = (blockValue / 2 / CENT) * CENT;
+        txNew.vout[1].nValue = (blockValue / CENT) * CENT;
         txNew.vout[2].nValue = blockValue - txNew.vout[1].nValue;
     }
     else if(hasPayment && txNew.vout.size() == 4) // 2 stake outputs, stake was split, plus a masternode payment

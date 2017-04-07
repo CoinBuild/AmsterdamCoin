@@ -1494,11 +1494,11 @@ bool static IsCommunityWallet(const CTxDestination& sourceDestination)
 }
 
 // miner's coin stake reward
-int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees, CTxDestination& destination)
+int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees, CTxDestination& destination, unsigned int nTime)
 {
     int64_t nSubsidy = STATIC_POS_REWARD;
 	
-	if (IsCommunityWallet(destination) && GetTime() <= COMMUNITY_PREMINE_END_TIME)
+	if (IsCommunityWallet(destination) && nTime <= COMMUNITY_PREMINE_END_TIME)
 	{
 		return COMMUNITY_PREMINE_AMOUNT * COIN;
 	}	
@@ -2116,7 +2116,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
         if (!vtx[1].GetCoinAge(txdb, pindex->pprev, nCoinAge))
             return error("ConnectBlock() : %s unable to get coin age for coinstake", vtx[1].GetHash().ToString());
 		
-        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->pprev, nCoinAge, nFees, pDestination);
+        int64_t nCalculatedStakeReward = GetProofOfStakeReward(pindex->pprev, nCoinAge, nFees, pDestination, nTime);
 
 		
 
