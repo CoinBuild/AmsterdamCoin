@@ -131,11 +131,9 @@ Value getstakinginfo(const Array& params, bool fHelp)
 
     uint64_t nNetworkWeight = GetPoSKernelPS();
     bool staking = nLastCoinStakeSearchInterval && nWeight;
-    if(pindexBest->nHeight <= HARD_FORK_BLOCK){
-        nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
-    } else {
-        nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
-    }
+    
+    nExpectedTime = staking ? (TARGET_SPACING * nNetworkWeight / nWeight) : 0;
+
 
     Object obj;
 
