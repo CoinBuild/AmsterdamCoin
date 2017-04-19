@@ -104,6 +104,7 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
         vSeeds.push_back(CDNSSeedData("First",  "amsterdamcoin.blockexplorer.pro"));
+		vSeeds.push_back(CDNSSeedData("Midnight miner",  "ams.midnightminer.net"));
 
         convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
