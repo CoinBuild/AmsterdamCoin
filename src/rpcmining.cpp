@@ -256,9 +256,6 @@ Value getworkex(const Array& params, bool fHelp)
     if (IsInitialBlockDownload())
         throw JSONRPCError(-10, "AmsterdamCoin is downloading blocks...");
 
-    if (pindexBest->nHeight >= Params().LastPOWBlock())
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
-
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;
     static vector<CBlock*> vNewBlock;
@@ -389,9 +386,6 @@ Value getwork(const Array& params, bool fHelp)
 
     if (IsInitialBlockDownload())
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AmsterdamCoin is downloading blocks...");
-
-    if (pindexBest->nHeight >= Params().LastPOWBlock())
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -542,8 +536,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
     //if (IsInitialBlockDownload())
     //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AmsterdamCoin is downloading blocks...");
 
-    if (pindexBest->nHeight >= Params().LastPOWBlock())
-        throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");
+
 
     // Update block
     static unsigned int nTransactionsUpdatedLast;
