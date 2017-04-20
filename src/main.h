@@ -28,8 +28,8 @@ static const int64_t STATIC_POS_REWARD = 1 * COIN; //Constant reward of 1 AMS pe
 static const int64_t TARGET_SPACING = 60;
 
 static const std::string COMMUNITY_WALLET_ADDRESS = "afdVPH9xuGgnpWkuy1JLeF9XhqrjJmq1W6";
-static const int64_t COMMUNITY_PREMINE_END_TIME = 1496275200;
-static const int64_t COMMUNITY_PREMINE_AMOUNT = 20000000;
+static const int64_t COMMUNITY_PREMINE_END_TIME = 1498867200;
+static const int64_t COMMUNITY_PREMINE_AMOUNT = 40000000;
 
 #define INSTANTX_SIGNATURES_REQUIRED           10
 #define INSTANTX_SIGNATURES_TOTAL              15
