@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAIN_PARTX_H
-#define BITCOIN_CHAIN_PARTX_H
+#ifndef BITCOIN_CHAIN_PARAMS_H
+#define BITCOIN_CHAIN_PARAMS_H
 
 #include "bignum.h"
 #include "uint256.h"
@@ -47,6 +47,7 @@ public:
         PUBKEY_ADDRESS,
         SCRIPT_ADDRESS,
         SECRET_KEY,
+        STEALTH_ADDRESS,
         EXT_PUBLIC_KEY,
         EXT_SECRET_KEY,
 
@@ -67,6 +68,11 @@ public:
     const std::vector<unsigned char> &Base58Prefix(Base58Type type) const { return base58Prefixes[type]; }
     virtual const vector<CAddress>& FixedSeeds() const = 0;
     int RPCPort() const { return nRPCPort; }
+    int POSStartBlock() const { return nPOSStartBlock; }
+    int PoolMaxTransactions() const { return nPoolMaxTransactions; }
+    std::string DarksendPoolDummyAddress() const { return strDarksendPoolDummyAddress; }
+    //std::string SporkKey() const { return strSporkKey; }
+    //std::string MasternodePaymentPubKey() const { return strMasternodePaymentsPubKey; }
 protected:
     CChainParams() {};
 
@@ -81,6 +87,11 @@ protected:
     string strDataDir;
     vector<CDNSSeedData> vSeeds;
     std::vector<unsigned char> base58Prefixes[MAX_BASE58_TYPES];
+    int nPOSStartBlock;
+    int nPoolMaxTransactions;
+    std::string strDarksendPoolDummyAddress;
+    //std::string strSporkKey;
+    //std::string strMasternodePaymentsPubKey;
 };
 
 /**

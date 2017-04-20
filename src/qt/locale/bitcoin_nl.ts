@@ -15,7 +15,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The AmsterdamCoin developers</source>
+Copyright © 2017 The AmsterdamCoin developers</source>
         <translation>Copyright © 2009-2014 De Bitcoin ontwikkelaars
 Copyright © 2012-2014 De NovaCoin ontwikkelaars
 Copyright © 2014 De AmsterdamCoin ontwikkelaars</translation>
@@ -28,13 +28,7 @@ This is experimental software.
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
-        <translation>
-			Dit is experimentele software.
-			
-			Gedistribueerd onder de MIT/X11 software licentie, zie het bijgevoegde COPYING bestand of kijk op &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
-			
-			Dit product bevat software die is ontwikkeld door het OpenSSL project voor gebruik in de OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) en cryptografische software geschreven door Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) en UPnP software geschreven door Thomas Bernard.
-		</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -260,9 +254,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-140"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>
-			Voer uw nieuwe wachtwoord in. &lt;br/&gt;Gebruik een wachtwoord van &lt;b&gt;Tien of meer willekeurige karakters&lt;/b&gt;, of &lt;b&gt; acht of meer woorden&lt;/b&gt;.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+82"/>
@@ -446,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-214"/>
         <location line="+551"/>
-        <source>AmsterdamCoin</source>
-        <translation>AmsterdamCoin</translation>
+        <source>Transfer</source>
+        <translation>Transfer</translation>
     </message>
     <message>
         <location line="-551"/>
@@ -614,9 +606,7 @@ Adres: %4
     <message>
         <location line="+9"/>
         <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation>
-			De portemonnee heeft geen encryptie
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
@@ -667,9 +657,7 @@ Adres: %4
     <message>
         <location line="-456"/>
         <source>Processed %1 blocks of transaction history.</source>
-        <translation>
-			%1 blokken verwerkt van de transactie geschiedenis.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+27"/>
@@ -681,26 +669,22 @@ Adres: %4
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation><numerusform>%n week</numerusform><numerusform>%n weken</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>%1 and %2</source>
-        <translation>
-			%1 en %2
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation><numerusform>%n jaar</numerusform><numerusform>%n jaren</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 behind</source>
-        <translation>
-			%1 achter
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
@@ -710,16 +694,12 @@ Adres: %4
     <message>
         <location line="+2"/>
         <source>Transactions after this will not yet be visible.</source>
-        <translation>
-			Transacties hierna zullen nog niet zichtbaar zijn.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
         <source>Error</source>
-        <translation>
-			Fout
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -734,9 +714,7 @@ Adres: %4
     <message>
         <location line="+69"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>
-			Deze transactie is groter dan het limiet. U kunt deze transactie nog steeds versturen %n transactiekosten welke naar de nodes gaan die uw transactie verwerken. Wilt u de transactiekosten betalen?
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+324"/>
@@ -746,7 +724,7 @@ Adres: %4
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
         <source>A fatal error occurred. AmsterdamCoin can no longer continue safely and will quit.</source>
-        <translation>Er is een fatale fout opgetreden. AmsterdamCoin kan niet langer veilig doorgaan en sluit af.</translation>
+        <translation>Een fatale fout . AmsterdamCoin kan niet langer veilig doorgaan en sluit af.</translation>
     </message>
 </context>
 <context>
@@ -1297,23 +1275,17 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+7"/>
         <source>Whether to select the coin outputs randomly or with minimal coin age.</source>
-        <translation>
-			Of u de munten willekeurig wilt selecteren of aan de hand van de minimale leeftijd.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Minimize weight consumption (experimental)</source>
-        <translation>
-			Minimale gewichtsconsumpie (experimenteel)
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Use black visual theme (requires restart)</source>
-        <translation>
-			Gebruik het zwarte thema (herstart nodig)
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+71"/>
@@ -1438,9 +1410,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start amsterdamcoin: click-to-pay handler</source>
-        <translation>
-			Kan amsterdamcoin niet starten: click-to-pay handler
-		</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1568,37 +1538,27 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+197"/>
         <source>&amp;Network Traffic</source>
-        <translation>
-			Netwerkverkeer
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+52"/>
         <source>&amp;Clear</source>
-        <translation>
-			&amp;Wissen
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Totals</source>
-        <translation>
-			Totalen
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+64"/>
         <source>In:</source>
-        <translation>
-			Binnen:
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+80"/>
         <source>Out:</source>
-        <translation>
-			Buiten:
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-383"/>
@@ -1856,8 +1816,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Voeg een AmsterdamCoin adres in (bijv. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1947,9 +1907,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location line="+5"/>
         <source>Error: Transaction creation failed!</source>
-        <translation>
-			Fout: Maken transactie niet gelukt!
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1991,10 +1949,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>
-			Het adres waar u de betaling aan wilt versturen (Bijvoorbeeld afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)
-		</translation>
+        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+60"/>
@@ -2034,8 +1990,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Voeg een AmsterdamCoin adres in (bijv. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -2058,8 +2014,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Het adres om het bericht te ondertekenen (bijv. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy) </translation>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Het adres om het bericht te ondertekenen (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i) </translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2122,8 +2078,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Het adres van het bericht is ondertekend met (bijv. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Het adres van het bericht is ondertekend met (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2138,8 +2094,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a AmsterdamCoin address (e.g. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</source>
-        <translation>Voeg een AmsterdamCoin adres in (bijv. afkp2n3SvZESSt9dshLXX3pL46P7BqAKEy)</translation>
+        <source>Enter a AmsterdamCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Voeg een AmsterdamCoin adres in (bijv. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2397,7 +2353,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform>Open voor %n blok</numerusform><numerusform>Open voor %n blokken</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+71"/>
@@ -3035,44 +2991,32 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     <message>
         <location line="+44"/>
         <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation>
-			Fout: Portemonnee gesloten, kan de transactie niet maken!
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>
-			Fout: De transactie vereist minimaal %s transactiekosten vanwege het bedrag, complexiteit of het gebruik van recent ontvangen bedragen!
-		</translation>	
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: Transaction creation failed!</source>
-        <translation>
-			Fout: Transactie maken niet gelukt!
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>
-			Fout: De transactie werd geweigerd! Dit kan gebeuren als sommige munten in uw portomonee al uitgegeven zijn.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Warning</source>
-        <translation>
-			Waarschuwing
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Information</source>
-        <translation>
-			Informatie
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -3207,9 +3151,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     <message>
         <location line="+10"/>
         <source>Initialization sanity check failed. AmsterdamCoin is shutting down.</source>
-        <translation>
-			Initialisatie gezondheidscontrole is niet geslaagd. AmsterdamCoin is aan het afsluiten.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+50"/>
@@ -3219,9 +3161,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     <message>
         <location line="+17"/>
         <source>Error: Disk space is low!</source>
-        <translation>
-			Fout: Te weining ruimte op de hardeschijf!
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3386,9 +3326,7 @@ for example: alertnotify=echo %%s | mail -s &quot;AmsterdamCoin Alert&quot; admi
     <message>
         <location line="+3"/>
         <source>Cannot obtain a lock on data directory %s. AmsterdamCoin is probably already running.</source>
-        <translation>
-			Kan geen slot verkrijgen op de data maap %s. AmsterdamCoin draait waarschijnlijk al.
-		</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>

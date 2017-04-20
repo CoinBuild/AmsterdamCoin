@@ -20,7 +20,7 @@
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.amsterdamcoin.AmsterdamCoinPayment</string>
+            <string>co.amsterdamcoin.TransferPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
               <string>amsterdamcoin</string>

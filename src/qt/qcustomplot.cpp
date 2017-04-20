@@ -14186,15 +14186,15 @@ void QCPColorScale::setType(QCPAxis::AxisType type)
   if (mType != type)
   {
     mType = type;
-    QCPRange rangeAmsterdamCoin(0, 6);
-    double logBaseAmsterdamCoin = 10;
-    QString labelAmsterdamCoin;
+    QCPRange rangeTransfer(0, 6);
+    double logBaseTransfer = 10;
+    QString labelTransfer;
     // revert some settings on old axis:
     if (mColorAxis)
     {
-      rangeAmsterdamCoin = mColorAxis.data()->range();
-      labelAmsterdamCoin = mColorAxis.data()->label();
-      logBaseAmsterdamCoin = mColorAxis.data()->scaleLogBase();
+      rangeTransfer = mColorAxis.data()->range();
+      labelTransfer = mColorAxis.data()->label();
+      logBaseTransfer = mColorAxis.data()->scaleLogBase();
       mColorAxis.data()->setLabel("");
       disconnect(mColorAxis.data(), SIGNAL(rangeChanged(QCPRange)), this, SLOT(setDataRange(QCPRange)));
       disconnect(mColorAxis.data(), SIGNAL(scaleTypeChanged(QCPAxis::ScaleType)), this, SLOT(setDataScaleType(QCPAxis::ScaleType)));
@@ -14207,9 +14207,9 @@ void QCPColorScale::setType(QCPAxis::AxisType type)
     // set new mColorAxis pointer:
     mColorAxis = mAxisRect.data()->axis(mType);
     // amsterdamcoin settings to new axis:
-    mColorAxis.data()->setRange(rangeAmsterdamCoin); // amsterdamcoin range of old axis to new one (necessary if axis changes from vertical to horizontal or vice versa)
-    mColorAxis.data()->setLabel(labelAmsterdamCoin);
-    mColorAxis.data()->setScaleLogBase(logBaseAmsterdamCoin); // scaleType is synchronized among axes in realtime via signals (connected in QCPColorScale ctor), so we only need to take care of log base here
+    mColorAxis.data()->setRange(rangeTransfer); // amsterdamcoin range of old axis to new one (necessary if axis changes from vertical to horizontal or vice versa)
+    mColorAxis.data()->setLabel(labelTransfer);
+    mColorAxis.data()->setScaleLogBase(logBaseTransfer); // scaleType is synchronized among axes in realtime via signals (connected in QCPColorScale ctor), so we only need to take care of log base here
     connect(mColorAxis.data(), SIGNAL(rangeChanged(QCPRange)), this, SLOT(setDataRange(QCPRange)));
     connect(mColorAxis.data(), SIGNAL(scaleTypeChanged(QCPAxis::ScaleType)), this, SLOT(setDataScaleType(QCPAxis::ScaleType)));
     mAxisRect.data()->setRangeDragAxes(QCPAxis::orientation(mType) == Qt::Horizontal ? mColorAxis.data() : 0,
