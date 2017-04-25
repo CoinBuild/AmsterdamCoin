@@ -2604,6 +2604,12 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
         for (unsigned int i = 2; i < vtx.size(); i++)
             if (vtx[i].IsCoinStake())
                 return DoS(100, error("CheckBlock() : more than one coinstake"));
+			
+		CTxDestination pDestination; 
+		ExtractDestination(vtx[1].vout[1].scriptPubKey, pDestination); 
+		
+		if (IsCommunityWallet(pDestination))
+			return true;
     }
 
     // Check proof-of-stake block signature
